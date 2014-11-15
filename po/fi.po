@@ -1,130 +1,368 @@
 # Finnish messages for gnome-phone-namager.
 # Copyright (C) 2006-2008 Free Software Foundation.
-# Suomennos: http://gnome.fi/
+# Suomennos: https://l10n.gnome.org/teams/fi/
 # Ilkka Tuohela <hile@iki.fi>, 2006-2008.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-phone-manager\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-09-25 06:13+0300\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"phone-manager&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2013-12-19 16:09+0000\n"
 "PO-Revision-Date: 2008-09-25 06:10+0300\n"
 "Last-Translator: Ilkka Tuohela <hile@iki.fi>\n"
 "Language-Team: Finnish <gnome-fi-laatu@lists.sourceforge.net>\n"
+"Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:158
+#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:153
 #, c-format
 msgid "Cannot get contact: %s"
 msgstr "Yhteystietoa ei voi hakea: %s"
 
-#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:191
+#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:186
 #, c-format
 msgid "Could not find contact: %s"
 msgstr "Yhteystietoa ei löydy: %s"
 
-#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:417
+#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:414
 msgid "Cannot create searchable view."
 msgstr "Etsintänäkymää ei voi luoda."
 
-#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:890
+#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:884
 msgid "Success"
 msgstr "Onnistui"
 
-#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:892
+#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:886
 msgid "An argument was invalid."
 msgstr "Argumentti oli virheellinen."
 
-#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:894
+#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:888
 msgid "The address book is busy."
 msgstr "Osoitekirja on käytössä."
 
-#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:896
+#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:890
 msgid "The address book is offline."
 msgstr "Osoitekirja ei ole käytettävissä."
 
-#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:898
+#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:892
 msgid "The address book does not exist."
 msgstr "Osoitekirjaa ei ole olemassa."
 
-#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:900
+#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:894
 msgid "The \"Me\" contact does not exist."
 msgstr "Yhteystietoa \"Minä\" ei löydy."
 
-#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:902
+#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:896
 msgid "The address book is not loaded."
 msgstr "Osoitekirjaa ei ole ladattu."
 
-#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:904
+#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:898
 msgid "The address book is already loaded."
 msgstr "Osoitekirja on jo ladattu."
 
-#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:906
+#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:900
 msgid "Permission was denied when accessing the address book."
 msgstr "Pääsy evättiin yritettäessä avata osoitekirjaa."
 
-#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:908
+#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:902
 msgid "The contact was not found."
 msgstr "Yhteystietoa ei löydy."
 
-#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:910
+#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:904
 msgid "This contact ID already exists."
 msgstr "Yhteystiedon tunniste on jo olemassa."
 
-#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:912
+#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:906
 msgid "The protocol is not supported."
 msgstr "Protokolla ei ole tuettu."
 
-#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:914
+#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:908
 msgid "The operation was cancelled."
 msgstr "Toiminto peruttiin."
 
-#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:916
+#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:910
 msgid "The operation could not be cancelled."
 msgstr "Toimintoa ei voitu perua."
 
-#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:918
+#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:912
 msgid "The address book authentication failed."
 msgstr "Todentaminen osoitekirjaan epäonnistui."
 
-#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:920
+#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:914
 msgid ""
 "Authentication is required to access the address book and was not given."
 msgstr ""
 "Todentaminen vaaditaan osoitekirjan käyttöön, eikä todennusta määritelty."
 
-#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:922
+#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:916
 msgid "A secure connection is not available."
 msgstr "Turvallinen yhteys ei ole käytettävissä."
 
-#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:924
+#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:918
 msgid "A CORBA error occurred whilst accessing the address book."
 msgstr "Tapahtui CORBA-virhe käytettäessä osoitekirjaa."
 
-#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:926
+#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:920
 msgid "The address book source does not exist."
 msgstr "Osoitekirjan lähdettä ei löydy."
 
-#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:928
-#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:931
+#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:922
+#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:925
 msgid "An unknown error occurred."
 msgstr "Tapahtui tuntematon virhe."
 
-#: ../cut-n-paste/gconf-bridge/gconf-bridge.c:1218
+#: ../cut-n-paste/gconf-bridge/gconf-bridge.c:1233
 #, c-format
 msgid "GConf error: %s"
 msgstr "GConf-virhe: %s"
 
-#: ../cut-n-paste/gconf-bridge/gconf-bridge.c:1228
+#: ../cut-n-paste/gconf-bridge/gconf-bridge.c:1238
 msgid "All further errors shown only on terminal."
 msgstr "Kaikki jatkossa tulevat virheet näytetään vain päätteessä."
 
+#: ../data/gnome-phone-manager.schemas.in.h:1
+msgid "The connection type used by gnome-phone-manager"
+msgstr "Gnome-phone-managerin käyttämän yhteyden tyyppi"
+
+#: ../data/gnome-phone-manager.schemas.in.h:2
+msgid ""
+"The connection type used by gnome-phone-manager: Bluetooth is 0 Serial 1 is "
+"1 Serial 2 is 2 IrDa is 3 Other connection types are 4"
+msgstr ""
+"Gnome-phone-managerin käyttämä yhteystyyppi. Arvo 0 on bluetooth, 1 "
+"sarjaportti 1, 2 sarjaportti 2, 3 IrDA ja 4 muu yhteystapa"
+
+#: ../data/gnome-phone-manager.schemas.in.h:3
+msgid "Bluetooth address of the device to connect to"
+msgstr "Bluetooth-osoite laitteelle, johon otetaan yhteyttä."
+
+#: ../data/gnome-phone-manager.schemas.in.h:4
+msgid ""
+"Bluetooth address of the device to connect to. Requires connection_type to "
+"be 1 to be used."
+msgstr ""
+"Bluetooth-osoite laitteelle, johon otetaan yhteyttä. Vaatii, että avain "
+"connection_type on arvoltaan 1."
+
+#: ../data/gnome-phone-manager.schemas.in.h:5
+msgid "The device node for the serial device to connect to"
+msgstr "Sarjaporttia käytettäessä käytetty laitetiedosto"
+
+#: ../data/gnome-phone-manager.schemas.in.h:6
+msgid ""
+"The device node for the serial device to connect to. Requires "
+"connection_type to be 4 to be used."
+msgstr ""
+"Sarjaporttiyhteydelle käytetty laitetiedosto. Vaatii, että avain "
+"connection_type on 4."
+
+#: ../data/gnome-phone-manager.schemas.in.h:7
+msgid "Whether to retry connecting to the mobile phone"
+msgstr "Yritetäänkö yhteyttä matkapuhelimeen uudestaan"
+
+#: ../data/gnome-phone-manager.schemas.in.h:8
+msgid ""
+"Whether to retry connecting to the mobile phone if the connection fails at "
+"some point."
+msgstr ""
+"Yritetäänkö yhteyttä matkapuhelimeen uudestaan, jos yhteys katkeaa jossain "
+"vaiheessa."
+
+#: ../data/gnome-phone-manager.schemas.in.h:9
+msgid "Whether to synchronise the phone clock with the computer's"
+msgstr ""
+
+#: ../data/gnome-phone-manager.schemas.in.h:10
+msgid "Whether to synchronise the phone clock with the computer's."
+msgstr ""
+
+#: ../data/gnome-phone-manager.schemas.in.h:11
+msgid "Whether to popup new messages on the desktop"
+msgstr "Näytetäänkö uudet viestit huomautusikkunoina työpöydällä"
+
+#: ../data/gnome-phone-manager.schemas.in.h:12
+msgid ""
+"Whether to popup new messages on the desktop as soon as they're received, as "
+"opposed to showing them when clicking on the tray icon."
+msgstr ""
+"Näytetäänkö uudet viesti työpöydällä niiden saapuessa, sen sijaan että ne "
+"näytetään napsautettaessa ilmoitusalueen kuvaketta."
+
+#: ../data/gnome-phone-manager.schemas.in.h:13
+msgid "Whether to play a sound alert when a new message comes in"
+msgstr "Soitetaanko äänihuomautus, kun uusi viesti saapuu"
+
+#: ../data/gnome-phone-manager.schemas.in.h:14
+msgid "Whether to play a sound alert when a new message comes in."
+msgstr "Soitetaanko äänihuomautus, kun uusi viesti saapuu."
+
+#: ../data/phonemgr.ui.h:1
+msgid "Message Received"
+msgstr "Viesti vastaanotettu"
+
+#: ../data/phonemgr.ui.h:2
+msgid "You have received a message"
+msgstr "Olet vastaanottanut viestin"
+
+#: ../data/phonemgr.ui.h:3
+msgid "Sender:"
+msgstr "Lähettäjä:"
+
+#: ../data/phonemgr.ui.h:4
+msgid "Date:"
+msgstr "Päivämäärä:"
+
+#: ../data/phonemgr.ui.h:5
+msgid "_Reply"
+msgstr "_Vastaa"
+
+#: ../data/phonemgr.ui.h:6
+msgid "Send Message"
+msgstr "Lähetä viesti"
+
+#: ../data/phonemgr.ui.h:7
+msgid "Enter your text message"
+msgstr "Syötä lähetettävä tekstiviesti"
+
+#: ../data/phonemgr.ui.h:8
+msgid "_Recipient:"
+msgstr "_Vastaanottaja:"
+
+#: ../data/phonemgr.ui.h:9
+msgid "_Message:"
+msgstr "_Viesti:"
+
+#: ../data/phonemgr.ui.h:10
+msgid "Enter the text message you want to send."
+msgstr "Syötä lähetettävä tekstiviesti."
+
+#: ../data/phonemgr.ui.h:11
+msgid "Characters left:"
+msgstr "Merkkejä jäljellä:"
+
+#. This is a receipt from the SMS server saying the message has been delivered to the recipient's phone
+#: ../data/phonemgr.ui.h:13
+msgid "_Notify when message is delivered"
+msgstr "Huomauta, kun viesti on lähetetty"
+
+#: ../data/phonemgr.ui.h:14
+msgid "_Send"
+msgstr "_Lähetä"
+
+#: ../data/phonemgr.ui.h:15
+msgid "Phone Manager Preferences"
+msgstr "Puhelimen hallinnan asetukset"
+
+#: ../data/phonemgr.ui.h:16
+msgid "Alerting"
+msgstr "Hälytys"
+
+#: ../data/phonemgr.ui.h:17
+msgid "_Pop-up window for new messages"
+msgstr "Näytä _ponnahdusikkuna viestin saapuessa"
+
+#: ../data/phonemgr.ui.h:18
+msgid "Play _sound when messages arrive"
+msgstr "_Soita ääni, kun viesti saapuu"
+
+#: ../data/phonemgr.ui.h:19
+msgid "Interface"
+msgstr "Käyttöliittymä"
+
+#: ../data/phonemgr.ui.h:20
+msgid "Phone Connection"
+msgstr "Puhelinyhteys"
+
+#: ../data/phonemgr.ui.h:21
+msgid "_Bluetooth"
+msgstr "_Bluetooth"
+
+#: ../data/phonemgr.ui.h:22
+msgid "Use Bluetooth wireless networking to connect to your phone"
+msgstr "Yhdistä käyttäen langatonta Bluetooth-yhteyttä"
+
+#: ../data/phonemgr.ui.h:23
+msgid "Serial port _1 (/dev/ttyS0)"
+msgstr "Sarjaportti _1 (/dev/ttyS0)"
+
+#: ../data/phonemgr.ui.h:24
+msgid "Connect using serial port 1, also known as COM1 or /dev/ttyS0"
+msgstr "Ota yhteyttä sarjaportin 1 kautta (COM1 tai /dev/ttyS0)"
+
+#: ../data/phonemgr.ui.h:25
+msgid "Serial port _2 (/dev/ttyS1)"
+msgstr "Sarjaportti _2 (/dev/ttyS1)"
+
+#: ../data/phonemgr.ui.h:26
+msgid "Connect using serial port 2, also known as COM2 or /dev/ttyS1"
+msgstr "Ota yhteyttä sarjaportin 2 kautta (COM2 tai /dev/ttyS1)"
+
+#: ../data/phonemgr.ui.h:27
+msgid "I_nfra red (/dev/ircomm0)"
+msgstr "I_nfrapuna (/dev/ircomm0)"
+
+#: ../data/phonemgr.ui.h:28
+msgid "Connect using infrared communication"
+msgstr "Yhdistä käyttäen infrapunayhteyttä"
+
+#: ../data/phonemgr.ui.h:29
+msgid "Other _port"
+msgstr "Muu _portti"
+
+#: ../data/phonemgr.ui.h:30
+msgid "Connect using an alternative serial device"
+msgstr "Yhdistä käyttäen muuta sarjalaitetta"
+
+#: ../data/phonemgr.ui.h:31
+msgid "Alternative device filename, e.g. /dev/ttyS3"
+msgstr "Vaihtoehtoinen laitenimi, kuten /dev/ttyS3"
+
+#: ../data/phonemgr.ui.h:32
+msgid "Automated Tasks"
+msgstr ""
+
+#: ../data/phonemgr.ui.h:33
+msgid "Automatically _retry connections"
+msgstr "Y_ritä avata yhteys uudestaan automaattisesti"
+
+#: ../data/phonemgr.ui.h:34
+msgid ""
+"Always try and reconnect whenever a connection is not immediately available. "
+"Use this with Bluetooth to ensure your phone connects whenever it comes in "
+"range."
+msgstr ""
+"Yritä aina avata yhteys uudestaan, jos yhteys ei ole heti saatavilla. Käytä "
+"tätä Bluetoothin kanssa varmistaaksesi, että puhelin yhdistetään aina kun se "
+"tulee tietokoneen lähettyville."
+
+#: ../data/phonemgr.ui.h:35
+msgid "Synchronise phone's _time and date"
+msgstr ""
+
+#: ../data/phonemgr.ui.h:36
+msgid "Synchronise phone's time and date with the computer's clock"
+msgstr ""
+
+#: ../data/phonemgr.ui.h:37
+msgid "Connection"
+msgstr "Yhteys"
+
+#. Translators: "device" is a phone or a modem
+#: ../gnome-bluetooth/phonemgr.c:133
+msgid "Use this device with Phone Manager"
+msgstr ""
+
+#: ../libgsm/glibgsmtest.c:138 ../src/main.c:56
+msgid "- Manage your mobile phone"
+msgstr "- Hallitse matkapuhelintasi"
+
 #. translators: the '%s' will be substituted with '/dev/ttyS0'
 #. or similar
-#: ../src/connection.c:113
+#: ../src/connection.c:123
 #, c-format
 msgid "Connected to device on %s"
 msgstr "Yhteys laitteeseen %s"
@@ -133,12 +371,12 @@ msgstr "Yhteys laitteeseen %s"
 #. bother changing the icon ourselves at this point
 #. translators: the '%s' will be substituted with '/dev/ttyS0'
 #. or similar
-#: ../src/connection.c:119
+#: ../src/connection.c:129
 #, c-format
 msgid "Failed connection to device on %s"
 msgstr "Yhteyttä laitteseen %s ei saatu"
 
-#: ../src/gnome-phone-manager.desktop.in.h:1 ../src/menu.c:49 ../src/menu.c:51
+#: ../src/gnome-phone-manager.desktop.in.h:1 ../src/icon.c:82 ../src/menu.c:49
 msgid "Phone Manager"
 msgstr "Puhelimen hallinta"
 
@@ -162,271 +400,72 @@ msgstr "Otetaan yhteyttä Puhelimeen"
 msgid "Not connected"
 msgstr "Ei yhteyttä"
 
-#: ../src/main.c:37
+#: ../src/main.c:38
 msgid "Show model name of a specific device"
 msgstr "Näytä määritellyn laitteen mallinimi"
 
-#: ../src/main.c:38
+#: ../src/main.c:38 ../src/main.c:39
+msgid "PORT"
+msgstr ""
+
+#: ../src/main.c:39
 msgid "Write the configuration file for gnokii debugging"
 msgstr "Kirjoita asetustiedosto gnokiin-vianetsintää varten"
 
-#: ../src/main.c:39
+#: ../src/main.c:40
 msgid "Enable debug"
 msgstr "Käytä vianetsintää"
 
-#: ../src/main.c:40
+#: ../src/main.c:41
 msgid "Show version information and exit"
 msgstr "Näytä versiotiedot ja lopeta"
 
-#: ../src/main.c:59
-msgid "- Manage your mobile phone"
-msgstr "- Hallitse matkapuhelintasi"
-
-#: ../src/main.c:72
+#: ../src/main.c:70
 #, c-format
 msgid "gnome-phone-manager version %s\n"
 msgstr "gnome-phone-manager versio %s\n"
 
-#: ../src/menu.c:40
+#: ../src/menu.c:43
+msgid "Send and receive messages from your mobile phone."
+msgstr "Lähetä ja vastaanota viestejä kännykälläsi."
+
+#: ../src/menu.c:51
 msgid "translator_credits"
 msgstr ""
 "Ilkka Tuohela, 2006-2008\n"
 "\n"
-"http://www.gnome.fi/"
+"https://l10n.gnome.org/teams/fi/"
 
-#: ../src/menu.c:44
-msgid "Send and receive messages from your mobile phone."
-msgstr "Lähetä ja vastaanota viestejä kännykälläsi."
-
-#: ../src/menu.c:56
+#: ../src/menu.c:53
 msgid "Phone Manager website"
 msgstr "Puhelimen hallinnan www-sivut"
 
-#: ../src/menu.c:87
+#: ../src/menu.c:84
 msgid "_Send Message"
 msgstr "_Lähetä viesti"
 
-#: ../src/phonemgr-chooser-button.c:80 ../src/phonemgr-chooser-button.c:190
-msgid "Click to select device..."
-msgstr "Valise laite napsauttamalla..."
+#: ../src/ui.c:110
+#, fuzzy
+#| msgid "Message Received"
+msgid "New text message received"
+msgstr "Viesti vastaanotettu"
 
-#: ../src/ui.c:335
+#: ../src/ui.c:286
 msgid "Message too long!"
 msgstr "Viesti on liian pitkä!"
 
-#: ../data/phonemgr.glade.h:1
-msgid "/dev/ttyS2"
-msgstr "/dev/ttyS2"
-
-#: ../data/phonemgr.glade.h:2
-msgid "Alerting"
-msgstr "Hälytys"
-
-#: ../data/phonemgr.glade.h:3
-msgid "Alternative device filename, e.g. /dev/ttyS3"
-msgstr "Vaihtoehtoinen laitenimi, kuten /dev/ttyS3"
-
-#: ../data/phonemgr.glade.h:4
-msgid ""
-"Always try and reconnect whenever a connection is not immediately available. "
-"Use this with Bluetooth to ensure your phone connects whenever it comes in "
-"range."
+#: ../telepathy/main.c:44
+msgid "Make all warnings fatal"
 msgstr ""
-"Yritä aina avata yhteys uudestaan, jos yhteys ei ole heti saatavilla. Käytä "
-"tätä Bluetoothin kanssa varmistaaksesi, että puhelin yhdistetään aina kun se "
-"tulee tietokoneen lähettyville."
 
-#: ../data/phonemgr.glade.h:5
-msgid "Automatically _retry connections"
-msgstr "Y_ritä avata yhteys uudestaan automaattisesti"
+#~ msgid "Click to select device..."
+#~ msgstr "Valise laite napsauttamalla..."
 
-#: ../data/phonemgr.glade.h:6
-msgid "Characters left:"
-msgstr "Merkkejä jäljellä:"
+#~ msgid "/dev/ttyS2"
+#~ msgstr "/dev/ttyS2"
 
-#: ../data/phonemgr.glade.h:7
-msgid "Connect using an alternative serial device"
-msgstr "Yhdistä käyttäen muuta sarjalaitetta"
-
-#: ../data/phonemgr.glade.h:8
-msgid "Connect using infrared communication"
-msgstr "Yhdistä käyttäen infrapunayhteyttä"
-
-#: ../data/phonemgr.glade.h:9
-msgid "Connect using serial port 1, also known as COM1 or /dev/ttyS0"
-msgstr "Ota yhteyttä sarjaportin 1 kautta (COM1 tai /dev/ttyS0)"
-
-#: ../data/phonemgr.glade.h:10
-msgid "Connect using serial port 2, also known as COM2 or /dev/ttyS1"
-msgstr "Ota yhteyttä sarjaportin 2 kautta (COM2 tai /dev/ttyS1)"
-
-#: ../data/phonemgr.glade.h:11
-msgid "Connection"
-msgstr "Yhteys"
-
-#: ../data/phonemgr.glade.h:12
-msgid "Date:"
-msgstr "Päivämäärä:"
-
-#: ../data/phonemgr.glade.h:13
-msgid "Enter the text message you want to send."
-msgstr "Syötä lähetettävä tekstiviesti."
-
-#: ../data/phonemgr.glade.h:14
-msgid "Enter your text message"
-msgstr "Syötä lähetettävä tekstiviesti"
-
-#: ../data/phonemgr.glade.h:15
-msgid "Error Handling"
-msgstr "Virheenkäsittely"
-
-#: ../data/phonemgr.glade.h:16
-msgid "I_nfra red (/dev/ircomm0)"
-msgstr "I_nfrapuna (/dev/ircomm0)"
-
-#: ../data/phonemgr.glade.h:17
-msgid "Interface"
-msgstr "Käyttöliittymä"
-
-#: ../data/phonemgr.glade.h:18
-msgid "Message Received"
-msgstr "Viesti vastaanotettu"
-
-#: ../data/phonemgr.glade.h:19
-msgid "Other _port"
-msgstr "Muu _portti"
-
-#: ../data/phonemgr.glade.h:20
-msgid "Phone Connection"
-msgstr "Puhelinyhteys"
-
-#: ../data/phonemgr.glade.h:21
-msgid "Phone Manager Preferences"
-msgstr "Puhelimen hallinnan asetukset"
-
-#: ../data/phonemgr.glade.h:22
-msgid "Play _sound when messages arrive"
-msgstr "_Soita ääni, kun viesti saapuu"
-
-#: ../data/phonemgr.glade.h:23
-msgid "Send Message"
-msgstr "Lähetä viesti"
-
-#: ../data/phonemgr.glade.h:24
-msgid "Sender:"
-msgstr "Lähettäjä:"
-
-#: ../data/phonemgr.glade.h:25
-msgid "Serial port _1 (/dev/ttyS0)"
-msgstr "Sarjaportti _1 (/dev/ttyS0)"
-
-#: ../data/phonemgr.glade.h:26
-msgid "Serial port _2 (/dev/ttyS1)"
-msgstr "Sarjaportti _2 (/dev/ttyS1)"
-
-#: ../data/phonemgr.glade.h:27
-msgid "Use Bluetooth wireless networking to connect to your phone"
-msgstr "Yhdistä käyttäen langatonta Bluetooth-yhteyttä"
-
-#: ../data/phonemgr.glade.h:28
-msgid "You have received a message"
-msgstr "Olet vastaanottanut viestin"
-
-#: ../data/phonemgr.glade.h:29
-msgid "_Bluetooth"
-msgstr "_Bluetooth"
-
-#: ../data/phonemgr.glade.h:30
-msgid "_Message:"
-msgstr "_Viesti:"
-
-#: ../data/phonemgr.glade.h:31
-msgid "_Notify when message is delivered"
-msgstr "Huomauta, kun viesti on lähetetty"
-
-#: ../data/phonemgr.glade.h:32
-msgid "_Pop-up window for new messages"
-msgstr "Näytä _ponnahdusikkuna viestin saapuessa"
-
-#: ../data/phonemgr.glade.h:33
-msgid "_Recipient:"
-msgstr "_Vastaanottaja:"
-
-#: ../data/phonemgr.glade.h:34
-msgid "_Reply"
-msgstr "_Vastaa"
-
-#: ../data/phonemgr.glade.h:35
-msgid "_Send"
-msgstr "_Lähetä"
-
-#: ../data/gnome-phone-manager.schemas.in.h:1
-msgid "Bluetooth address of the device to connect to"
-msgstr "Bluetooth-osoite laitteelle, johon otetaan yhteyttä."
-
-#: ../data/gnome-phone-manager.schemas.in.h:2
-msgid ""
-"Bluetooth address of the device to connect to. Requires connection_type to "
-"be 1 to be used."
-msgstr ""
-"Bluetooth-osoite laitteelle, johon otetaan yhteyttä. Vaatii, että avain "
-"connection_type on arvoltaan 1."
-
-#: ../data/gnome-phone-manager.schemas.in.h:3
-msgid "The connection type used by gnome-phone-manager"
-msgstr "Gnome-phone-managerin käyttämän yhteyden tyyppi"
-
-#: ../data/gnome-phone-manager.schemas.in.h:4
-msgid ""
-"The connection type used by gnome-phone-manager: Bluetooth is 0 Serial 1 is "
-"1 Serial 2 is 2 IrDa is 3 Other connection types are 4"
-msgstr ""
-"Gnome-phone-managerin käyttämä yhteystyyppi. Arvo 0 on bluetooth, 1 "
-"sarjaportti 1, 2 sarjaportti 2, 3 IrDA ja 4 muu yhteystapa"
-
-#: ../data/gnome-phone-manager.schemas.in.h:5
-msgid "The device node for the serial device to connect to"
-msgstr "Sarjaporttia käytettäessä käytetty laitetiedosto"
-
-#: ../data/gnome-phone-manager.schemas.in.h:6
-msgid ""
-"The device node for the serial device to connect to. Requires "
-"connection_type to be 4 to be used."
-msgstr ""
-"Sarjaporttiyhteydelle käytetty laitetiedosto. Vaatii, että avain "
-"connection_type on 4."
-
-#: ../data/gnome-phone-manager.schemas.in.h:7
-msgid "Whether to play a sound alert when a new message comes in"
-msgstr "Soitetaanko äänihuomautus, kun uusi viesti saapuu"
-
-#: ../data/gnome-phone-manager.schemas.in.h:8
-msgid "Whether to play a sound alert when a new message comes in."
-msgstr "Soitetaanko äänihuomautus, kun uusi viesti saapuu."
-
-#: ../data/gnome-phone-manager.schemas.in.h:9
-msgid "Whether to popup new messages on the desktop"
-msgstr "Näytetäänkö uudet viestit huomautusikkunoina työpöydällä"
-
-#: ../data/gnome-phone-manager.schemas.in.h:10
-msgid ""
-"Whether to popup new messages on the desktop as soon as they're received, as "
-"opposed to showing them when clicking on the tray icon."
-msgstr ""
-"Näytetäänkö uudet viesti työpöydällä niiden saapuessa, sen sijaan että ne "
-"näytetään napsautettaessa ilmoitusalueen kuvaketta."
-
-#: ../data/gnome-phone-manager.schemas.in.h:11
-msgid "Whether to retry connecting to the mobile phone"
-msgstr "Yritetäänkö yhteyttä matkapuhelimeen uudestaan"
-
-#: ../data/gnome-phone-manager.schemas.in.h:12
-msgid ""
-"Whether to retry connecting to the mobile phone if the connection fails at "
-"some point."
-msgstr ""
-"Yritetäänkö yhteyttä matkapuhelimeen uudestaan, jos yhteys katkeaa jossain "
-"vaiheessa."
+#~ msgid "Error Handling"
+#~ msgstr "Virheenkäsittely"
 
 #~ msgid "Number of characters left in the message"
 #~ msgstr "Viestissä jäljellä olevien merkkien lukumäärä"
