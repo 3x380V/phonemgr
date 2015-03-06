@@ -2,19 +2,24 @@
 # Copyright (C) 2011 phonemgr's COPYRIGHT HOLDER
 # This file is distributed under the same license as the phonemgr package.
 # Yuri Myasoedov <omerta13@yandex.ru>, 2011.
+# Stas Solovey <whats_up@tut.by>, 2015.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: phonemgr master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-phone-manager&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2011-07-04 22:14+0000\n"
-"PO-Revision-Date: 2011-07-30 01:30+0300\n"
-"Last-Translator: Yuri Myasoedov <omerta13@yandex.ru>\n"
-"Language-Team: Russian <gnome-cyr@gnome.org>\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"phone-manager&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2013-12-19 16:09+0000\n"
+"PO-Revision-Date: 2015-03-06 12:40+0300\n"
+"Last-Translator: Stas Solovey <whats_up@tut.by>\n"
+"Language-Team: Русский <gnome-cyr@gnome.org>\n"
+"Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
+"X-Generator: Gtranslator 2.91.6\n"
 
 #: ../cut-n-paste/e-contact-entry/e-contact-entry.c:153
 #, c-format
@@ -30,84 +35,87 @@ msgstr "Не удалось найти контакт: %s"
 msgid "Cannot create searchable view."
 msgstr "Не удалось создать вид с возможностью поиска."
 
-#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:886
+#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:884
 msgid "Success"
 msgstr "Успешно"
 
-#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:888
+#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:886
 msgid "An argument was invalid."
 msgstr "Неверный аргумент."
 
-#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:890
+#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:888
 msgid "The address book is busy."
 msgstr "Адресная книга занята."
 
-#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:892
+#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:890
 msgid "The address book is offline."
 msgstr "Адресная книга находится в автономном режиме."
 
-#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:894
+#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:892
 msgid "The address book does not exist."
 msgstr "Адресная книга не существует."
 
-#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:896
+#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:894
 msgid "The \"Me\" contact does not exist."
 msgstr "Контакт «Я» не существует."
 
-#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:898
+#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:896
 msgid "The address book is not loaded."
 msgstr "Адресная книга не загружена."
 
-#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:900
+#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:898
 msgid "The address book is already loaded."
 msgstr "Адресная книга уже загружена."
 
-#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:902
+#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:900
 msgid "Permission was denied when accessing the address book."
 msgstr "В доступе к адресной книге отказано."
 
-#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:904
+#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:902
 msgid "The contact was not found."
 msgstr "Контакт не найден."
 
-#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:906
+#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:904
 msgid "This contact ID already exists."
 msgstr "Контакт с таким ID уже существует."
 
-#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:908
+#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:906
 msgid "The protocol is not supported."
 msgstr "Протокол не поддерживается."
 
-#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:910
+#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:908
 msgid "The operation was cancelled."
 msgstr "Операция отменена."
 
-#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:912
+#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:910
 msgid "The operation could not be cancelled."
 msgstr "Операция не может быть отменена."
 
-#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:914
+#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:912
 msgid "The address book authentication failed."
 msgstr "Сбой аутентификации адресной книги."
 
-#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:916
-msgid "Authentication is required to access the address book and was not given."
-msgstr "Для доступа к адресной книге требуется аутентификация, которая не была предоставлена."
+#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:914
+msgid ""
+"Authentication is required to access the address book and was not given."
+msgstr ""
+"Для доступа к адресной книге требуется аутентификация, которая не была "
+"предоставлена."
 
-#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:918
+#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:916
 msgid "A secure connection is not available."
 msgstr "Безопасное соединение недоступно."
 
-#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:920
+#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:918
 msgid "A CORBA error occurred whilst accessing the address book."
 msgstr "При попытке получения доступа к адресной книге произошла ошибка CORBA."
 
-#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:922
+#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:920
 msgid "The address book source does not exist."
 msgstr "Источник адресной книги не существует."
 
-#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:924
-#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:927
+#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:922
+#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:925
 msgid "An unknown error occurred."
 msgstr "Произошла неизвестная ошибка."
 
@@ -120,14 +128,244 @@ msgstr "Ошибка GConf: %s"
 msgid "All further errors shown only on terminal."
 msgstr "Все последующие ошибки показаны только в терминале."
 
+#: ../data/gnome-phone-manager.schemas.in.h:1
+msgid "The connection type used by gnome-phone-manager"
+msgstr "Тип подключения, используемый gnome-phone-manager"
+
+#: ../data/gnome-phone-manager.schemas.in.h:2
+msgid ""
+"The connection type used by gnome-phone-manager: Bluetooth is 0 Serial 1 is "
+"1 Serial 2 is 2 IrDa is 3 Other connection types are 4"
+msgstr ""
+"Тип подключения, используемый gnome-phone-manager: 0 — Bluetooth; 1 — Serial "
+"1; 2 — Serial 2; 3 — Serial 3; 4 — другой тип подключения."
+
+#: ../data/gnome-phone-manager.schemas.in.h:3
+msgid "Bluetooth address of the device to connect to"
+msgstr "Bluetooth-адрес устройства, к которому необходимо подключиться"
+
+#: ../data/gnome-phone-manager.schemas.in.h:4
+msgid ""
+"Bluetooth address of the device to connect to. Requires connection_type to "
+"be 1 to be used."
+msgstr ""
+"Адрес bluetooth-устройства, к которому необходимо подключиться. Ключ "
+"connection_type должен иметь значение «1»."
+
+#: ../data/gnome-phone-manager.schemas.in.h:5
+msgid "The device node for the serial device to connect to"
+msgstr "Узел последовательного устройства, к которому необходимо подключиться"
+
+#: ../data/gnome-phone-manager.schemas.in.h:6
+msgid ""
+"The device node for the serial device to connect to. Requires "
+"connection_type to be 4 to be used."
+msgstr ""
+"Узел устройства для подключения к последовательному устройству. Ключ "
+"connection_type должен иметь значение «4»."
+
+#: ../data/gnome-phone-manager.schemas.in.h:7
+msgid "Whether to retry connecting to the mobile phone"
+msgstr "Подключиться ли повторно к мобильному телефону"
+
+#: ../data/gnome-phone-manager.schemas.in.h:8
+msgid ""
+"Whether to retry connecting to the mobile phone if the connection fails at "
+"some point."
+msgstr ""
+"Подключиться ли повторно к мобильному телефону, если обрывается соединение."
+
+#: ../data/gnome-phone-manager.schemas.in.h:9
+msgid "Whether to synchronise the phone clock with the computer's"
+msgstr "Выполнять ли синхронизацию часов на телефоне с часами на компьютере"
+
+#: ../data/gnome-phone-manager.schemas.in.h:10
+msgid "Whether to synchronise the phone clock with the computer's."
+msgstr "Выполнять ли синхронизацию часов на телефоне с часами на компьютере."
+
+#: ../data/gnome-phone-manager.schemas.in.h:11
+msgid "Whether to popup new messages on the desktop"
+msgstr "Показывать ли всплывающие сообщения на рабочем столе"
+
+#: ../data/gnome-phone-manager.schemas.in.h:12
+msgid ""
+"Whether to popup new messages on the desktop as soon as they're received, as "
+"opposed to showing them when clicking on the tray icon."
+msgstr ""
+"Показывать ли всплывающие сообщения на рабочем столе при получении, или "
+"показывать их только при щелчке по значку в системном лотке."
+
+#: ../data/gnome-phone-manager.schemas.in.h:13
+msgid "Whether to play a sound alert when a new message comes in"
+msgstr "Воспроизводить ли звуковое уведомление при получении новых сообщений"
+
+#: ../data/gnome-phone-manager.schemas.in.h:14
+msgid "Whether to play a sound alert when a new message comes in."
+msgstr "Воспроизводить ли звуковое уведомление при получении новых сообщений."
+
+#: ../data/phonemgr.ui.h:1
+msgid "Message Received"
+msgstr "Получено сообщение"
+
+#: ../data/phonemgr.ui.h:2
+msgid "You have received a message"
+msgstr "Вы получили сообщение"
+
+#: ../data/phonemgr.ui.h:3
+msgid "Sender:"
+msgstr "Отправитель:"
+
+#: ../data/phonemgr.ui.h:4
+msgid "Date:"
+msgstr "Дата:"
+
+#: ../data/phonemgr.ui.h:5
+msgid "_Reply"
+msgstr "_Ответить"
+
+#: ../data/phonemgr.ui.h:6
+msgid "Send Message"
+msgstr "Отправить сообщение"
+
+#: ../data/phonemgr.ui.h:7
+msgid "Enter your text message"
+msgstr "Введите текстовое сообщение"
+
+#: ../data/phonemgr.ui.h:8
+msgid "_Recipient:"
+msgstr "_Получатель:"
+
+#: ../data/phonemgr.ui.h:9
+msgid "_Message:"
+msgstr "_Сообщение:"
+
+#: ../data/phonemgr.ui.h:10
+msgid "Enter the text message you want to send."
+msgstr "Введите текстовое сообщение, которое хотите отправить."
+
+#: ../data/phonemgr.ui.h:11
+msgid "Characters left:"
+msgstr "Осталось символов:"
+
+#. This is a receipt from the SMS server saying the message has been delivered to the recipient's phone
+#: ../data/phonemgr.ui.h:13
+msgid "_Notify when message is delivered"
+msgstr "_Уведомлять о доставке сообщений"
+
+#: ../data/phonemgr.ui.h:14
+msgid "_Send"
+msgstr "_Отправить"
+
+#: ../data/phonemgr.ui.h:15
+msgid "Phone Manager Preferences"
+msgstr "Настройки Phone Manager"
+
+#: ../data/phonemgr.ui.h:16
+msgid "Alerting"
+msgstr "Уведомления"
+
+#: ../data/phonemgr.ui.h:17
+msgid "_Pop-up window for new messages"
+msgstr "_Показывать всплывающее окно при получении новых сообщений"
+
+#: ../data/phonemgr.ui.h:18
+msgid "Play _sound when messages arrive"
+msgstr "_Воспроизводить звук при получении сообщений"
+
+#: ../data/phonemgr.ui.h:19
+msgid "Interface"
+msgstr "Интерфейс"
+
+#: ../data/phonemgr.ui.h:20
+msgid "Phone Connection"
+msgstr "Подключение к телефону"
+
+#: ../data/phonemgr.ui.h:21
+msgid "_Bluetooth"
+msgstr "_Bluetooth"
+
+#: ../data/phonemgr.ui.h:22
+msgid "Use Bluetooth wireless networking to connect to your phone"
+msgstr "Использовать Bluetooth для подключения к телефону"
+
+#: ../data/phonemgr.ui.h:23
+msgid "Serial port _1 (/dev/ttyS0)"
+msgstr "Последовательный порт _1 (/dev/ttyS0)"
+
+#: ../data/phonemgr.ui.h:24
+msgid "Connect using serial port 1, also known as COM1 or /dev/ttyS0"
+msgstr "Подключиться через 1-й последовательный порт (COM1 или /dev/ttyS0)"
+
+#: ../data/phonemgr.ui.h:25
+msgid "Serial port _2 (/dev/ttyS1)"
+msgstr "Последовательный порт _2 (/dev/ttyS0)"
+
+#: ../data/phonemgr.ui.h:26
+msgid "Connect using serial port 2, also known as COM2 or /dev/ttyS1"
+msgstr "Подключиться через 2-й последовательный порт (COM2 или /dev/ttyS1)"
+
+#: ../data/phonemgr.ui.h:27
+msgid "I_nfra red (/dev/ircomm0)"
+msgstr "_ИК (/dev/ircomm0)"
+
+#: ../data/phonemgr.ui.h:28
+msgid "Connect using infrared communication"
+msgstr "Подключиться с помощью ИК-интерфейса"
+
+#: ../data/phonemgr.ui.h:29
+msgid "Other _port"
+msgstr "Другой _порт"
+
+#: ../data/phonemgr.ui.h:30
+msgid "Connect using an alternative serial device"
+msgstr "Подключиться, используя альтернативное последовательное устройство"
+
+#: ../data/phonemgr.ui.h:31
+msgid "Alternative device filename, e.g. /dev/ttyS3"
+msgstr "Альтернативное имя файла устройства, напр. /dev/ttyS3"
+
+#: ../data/phonemgr.ui.h:32
+msgid "Automated Tasks"
+msgstr "Автоматические задачи"
+
+#: ../data/phonemgr.ui.h:33
+msgid "Automatically _retry connections"
+msgstr "Автоматически _переподключаться"
+
+#: ../data/phonemgr.ui.h:34
+msgid ""
+"Always try and reconnect whenever a connection is not immediately available. "
+"Use this with Bluetooth to ensure your phone connects whenever it comes in "
+"range."
+msgstr ""
+"Всегда пробовать и переподключаться, когда соединение недоступно. "
+"Используйте Bluetooth, чтобы телефон подключался, когда он становится "
+"доступным."
+
+#: ../data/phonemgr.ui.h:35
+msgid "Synchronise phone's _time and date"
+msgstr "Синхронизировать время и дату на телефоне"
+
+#: ../data/phonemgr.ui.h:36
+msgid "Synchronise phone's time and date with the computer's clock"
+msgstr "Синхронизировать время и дату на телефоне с часами на компьютере"
+
+#: ../data/phonemgr.ui.h:37
+msgid "Connection"
+msgstr "Подключение"
+
 #. Translators: "device" is a phone or a modem
 #: ../gnome-bluetooth/phonemgr.c:133
 msgid "Use this device with Phone Manager"
 msgstr "Использовать это устройство с Phone Manager"
 
+#: ../libgsm/glibgsmtest.c:138 ../src/main.c:56
+msgid "- Manage your mobile phone"
+msgstr "— управление мобильным телефоном"
+
 #. translators: the '%s' will be substituted with '/dev/ttyS0'
 #. or similar
-#: ../src/connection.c:124
+#: ../src/connection.c:123
 #, c-format
 msgid "Connected to device on %s"
 msgstr "Устройство подключено к %s"
@@ -136,24 +374,23 @@ msgstr "Устройство подключено к %s"
 #. bother changing the icon ourselves at this point
 #. translators: the '%s' will be substituted with '/dev/ttyS0'
 #. or similar
-#: ../src/connection.c:130
+#: ../src/connection.c:129
 #, c-format
 msgid "Failed connection to device on %s"
 msgstr "Не удалось подключиться к устройству через %s"
 
-#: ../src/gnome-phone-manager.desktop.in.h:1
-#: ../src/menu.c:50
-#: ../src/menu.c:52
+#: ../src/gnome-phone-manager.desktop.in.h:1 ../src/icon.c:82 ../src/menu.c:49
 msgid "Phone Manager"
 msgstr "Phone Manager"
 
 #: ../src/gnome-phone-manager.desktop.in.h:2
 msgid "Receive and send text messages from your mobile phone"
-msgstr "Получайте и отправляйте текстовые сообщения со своего мобильного телефона"
+msgstr ""
+"Получайте и отправляйте текстовые сообщения со своего мобильного телефона"
 
 #: ../src/icon.c:59
 msgid "Message arrived"
-msgstr "Получно сообщение"
+msgstr "Получено сообщение"
 
 #: ../src/icon.c:62
 msgid "Connected"
@@ -171,8 +408,7 @@ msgstr "Не подключено"
 msgid "Show model name of a specific device"
 msgstr "Показать название модели определённого устройства"
 
-#: ../src/main.c:38
-#: ../src/main.c:39
+#: ../src/main.c:38 ../src/main.c:39
 msgid "PORT"
 msgstr "ПОРТ"
 
@@ -188,11 +424,7 @@ msgstr "Включить отладку"
 msgid "Show version information and exit"
 msgstr "Показать номер версии и выйти"
 
-#: ../src/main.c:60
-msgid "- Manage your mobile phone"
-msgstr "- Manage your mobile phone"
-
-#: ../src/main.c:74
+#: ../src/main.c:70
 #, c-format
 msgid "gnome-phone-manager version %s\n"
 msgstr "gnome-phone-manager версии %s\n"
@@ -201,15 +433,17 @@ msgstr "gnome-phone-manager версии %s\n"
 msgid "Send and receive messages from your mobile phone."
 msgstr "Отправка и получение сообщений с мобильного телефона."
 
-#: ../src/menu.c:55
+#: ../src/menu.c:51
 msgid "translator_credits"
-msgstr "Юрий Мясоедов <omerta13@yandex.ru>"
+msgstr ""
+"Yuri Myasoedov <omerta13@yandex.ru>, 2011.\n"
+"Stas Solovey <whats_up@tut.by>, 2015."
 
-#: ../src/menu.c:57
+#: ../src/menu.c:53
 msgid "Phone Manager website"
 msgstr "Веб-сайт Phone Manager"
 
-#: ../src/menu.c:88
+#: ../src/menu.c:84
 msgid "_Send Message"
 msgstr "_Отправить сообщение"
 
@@ -217,208 +451,10 @@ msgstr "_Отправить сообщение"
 msgid "New text message received"
 msgstr "Получено новое текстовое сообщение"
 
-#: ../src/ui.c:276
+#: ../src/ui.c:286
 msgid "Message too long!"
 msgstr "Слишком длинное сообщение!"
 
-#: ../data/phonemgr.ui.h:1
-msgid "Alerting"
-msgstr "Уведомления"
-
-#: ../data/phonemgr.ui.h:2
-msgid "Alternative device filename, e.g. /dev/ttyS3"
-msgstr "Альтернативное имя файла устройства, напр. /dev/ttyS3"
-
-#: ../data/phonemgr.ui.h:3
-msgid "Always try and reconnect whenever a connection is not immediately available. Use this with Bluetooth to ensure your phone connects whenever it comes in range."
-msgstr "Всегда пробовать и переподключаться, когда соединение недоступно. Используйте Bluetooth, чтобы телефон подключался, когда он становится доступным."
-
-#: ../data/phonemgr.ui.h:4
-msgid "Automated Tasks"
-msgstr "Автоматические задачи"
-
-#: ../data/phonemgr.ui.h:5
-msgid "Automatically _retry connections"
-msgstr "Автоматически _переподключаться"
-
-#: ../data/phonemgr.ui.h:6
-msgid "Characters left:"
-msgstr "Осталось символов:"
-
-#: ../data/phonemgr.ui.h:7
-msgid "Connect using an alternative serial device"
-msgstr "Подключиться, используя альтернативное последовательное устройство"
-
-#: ../data/phonemgr.ui.h:8
-msgid "Connect using infrared communication"
-msgstr "Подключиться с помощью ИК-интерфейса"
-
-#: ../data/phonemgr.ui.h:9
-msgid "Connect using serial port 1, also known as COM1 or /dev/ttyS0"
-msgstr "Подключиться через 1-й последовательный порт (COM1 или /dev/ttyS0)"
-
-#: ../data/phonemgr.ui.h:10
-msgid "Connect using serial port 2, also known as COM2 or /dev/ttyS1"
-msgstr "Подключиться через 2-й последовательный порт (COM2 или /dev/ttyS1)"
-
-#: ../data/phonemgr.ui.h:11
-msgid "Connection"
-msgstr "Подключение"
-
-#: ../data/phonemgr.ui.h:12
-msgid "Date:"
-msgstr "Дата:"
-
-#: ../data/phonemgr.ui.h:13
-msgid "Enter the text message you want to send."
-msgstr "Введите текстовое сообщение, которое хотите отправить."
-
-#: ../data/phonemgr.ui.h:14
-msgid "Enter your text message"
-msgstr "Введите текстовое сообщение"
-
-#: ../data/phonemgr.ui.h:15
-msgid "I_nfra red (/dev/ircomm0)"
-msgstr "_ИК (/dev/ircomm0)"
-
-#: ../data/phonemgr.ui.h:16
-msgid "Interface"
-msgstr "Интерфейс"
-
-#: ../data/phonemgr.ui.h:17
-msgid "Message Received"
-msgstr "Получено сообщение"
-
-#: ../data/phonemgr.ui.h:18
-msgid "Other _port"
-msgstr "Другой _порт"
-
-#: ../data/phonemgr.ui.h:19
-msgid "Phone Connection"
-msgstr "Подключение к телефону"
-
-#: ../data/phonemgr.ui.h:20
-msgid "Phone Manager Preferences"
-msgstr "Настройки Phone Manager"
-
-#: ../data/phonemgr.ui.h:21
-msgid "Play _sound when messages arrive"
-msgstr "_Воспроизводить звук при получении сообщений"
-
-#: ../data/phonemgr.ui.h:22
-msgid "Send Message"
-msgstr "Отправить сообщение"
-
-#: ../data/phonemgr.ui.h:23
-msgid "Sender:"
-msgstr "Отправитель:"
-
-#: ../data/phonemgr.ui.h:24
-msgid "Serial port _1 (/dev/ttyS0)"
-msgstr "Последовательный порт _1 (/dev/ttyS0)"
-
-#: ../data/phonemgr.ui.h:25
-msgid "Serial port _2 (/dev/ttyS1)"
-msgstr "Последовательный порт _2 (/dev/ttyS0)"
-
-#: ../data/phonemgr.ui.h:26
-msgid "Synchronise phone's _time and date"
-msgstr "Синхронизировать время и дату на телефоне"
-
-#: ../data/phonemgr.ui.h:27
-msgid "Synchronise phone's time and date with the computer's clock"
-msgstr "Синхронизировать время и дату на телефоне с часами на компьютере"
-
-#: ../data/phonemgr.ui.h:28
-msgid "Use Bluetooth wireless networking to connect to your phone"
-msgstr "Использовать Bluetooth для подключения к телефону"
-
-#: ../data/phonemgr.ui.h:29
-msgid "You have received a message"
-msgstr "Вы получили сообщение"
-
-#: ../data/phonemgr.ui.h:30
-msgid "_Bluetooth"
-msgstr "_Bluetooth"
-
-#: ../data/phonemgr.ui.h:31
-msgid "_Message:"
-msgstr "_Сообщение:"
-
-#. This is a receipt from the SMS server saying the message has been delivered to the recipient's phone
-#: ../data/phonemgr.ui.h:33
-msgid "_Notify when message is delivered"
-msgstr "_Уведомлять о доставке сообщений"
-
-#: ../data/phonemgr.ui.h:34
-msgid "_Pop-up window for new messages"
-msgstr "_Показывать всплывающее окно при получении новых сообщений"
-
-#: ../data/phonemgr.ui.h:35
-msgid "_Recipient:"
-msgstr "_Получатель:"
-
-#: ../data/phonemgr.ui.h:36
-msgid "_Reply"
-msgstr "_Ответить"
-
-#: ../data/phonemgr.ui.h:37
-msgid "_Send"
-msgstr "_Отправить"
-
-#: ../data/gnome-phone-manager.schemas.in.h:1
-msgid "Bluetooth address of the device to connect to"
-msgstr "Bluetooth-адрес устройства, к которому необходимо подключиться"
-
-#: ../data/gnome-phone-manager.schemas.in.h:2
-msgid "Bluetooth address of the device to connect to. Requires connection_type to be 1 to be used."
-msgstr "Адрес bluetooth-устройства, к которому необходимо подключиться. Ключ connection_type должен иметь значение «1»."
-
-#: ../data/gnome-phone-manager.schemas.in.h:3
-msgid "The connection type used by gnome-phone-manager"
-msgstr "Тип подключения, используемый gnome-phone-manager"
-
-#: ../data/gnome-phone-manager.schemas.in.h:4
-msgid "The connection type used by gnome-phone-manager: Bluetooth is 0 Serial 1 is 1 Serial 2 is 2 IrDa is 3 Other connection types are 4"
-msgstr "Тип подключения, используемый gnome-phone-manager: 0 — Bluetooth; 1 — Serial 1; 2 — Serial 2; 3 — Serial 3; 4 — другой тип подключения."
-
-#: ../data/gnome-phone-manager.schemas.in.h:5
-msgid "The device node for the serial device to connect to"
-msgstr "Узел последовательного устройства, к которому необходимо подключиться"
-
-#: ../data/gnome-phone-manager.schemas.in.h:6
-msgid "The device node for the serial device to connect to. Requires connection_type to be 4 to be used."
-msgstr "Узел устройства для подключения к последовательному устройству. Ключ connection_type должен иметь значение «4»."
-
-#: ../data/gnome-phone-manager.schemas.in.h:7
-msgid "Whether to play a sound alert when a new message comes in"
-msgstr "Воспроизводить ли звуковое уведомление при получении новых сообщений"
-
-#: ../data/gnome-phone-manager.schemas.in.h:8
-msgid "Whether to play a sound alert when a new message comes in."
-msgstr "Воспроизводить ли звуковое уведомление при получении новых сообщений."
-
-#: ../data/gnome-phone-manager.schemas.in.h:9
-msgid "Whether to popup new messages on the desktop"
-msgstr "Показывать ли всплывающие сообщения на рабочем столе"
-
-#: ../data/gnome-phone-manager.schemas.in.h:10
-msgid "Whether to popup new messages on the desktop as soon as they're received, as opposed to showing them when clicking on the tray icon."
-msgstr "Показывать ли всплывающие сообщения на рабочем столе при получении, или показывать их только при щелчке по значку в системном лотке."
-
-#: ../data/gnome-phone-manager.schemas.in.h:11
-msgid "Whether to retry connecting to the mobile phone"
-msgstr "Подключиться ли повторно к мобильному телефону"
-
-#: ../data/gnome-phone-manager.schemas.in.h:12
-msgid "Whether to retry connecting to the mobile phone if the connection fails at some point."
-msgstr "Подключиться ли повторно к мобильному телефону, если обрывается соединение."
-
-#: ../data/gnome-phone-manager.schemas.in.h:13
-msgid "Whether to synchronise the phone clock with the computer's"
-msgstr "Выполнять ли синхронизацию часов на телефоне с часами на компьютере"
-
-#: ../data/gnome-phone-manager.schemas.in.h:14
-msgid "Whether to synchronise the phone clock with the computer's."
-msgstr "Выполнять ли синхронизацию часов на телефоне с часами на компьютере."
-
+#: ../telepathy/main.c:44
+msgid "Make all warnings fatal"
+msgstr "Сделать все предупреждения критическими"
