@@ -5,13 +5,16 @@
 # gnomepl@aviary.pl
 # -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 # Michał Kastelik <mkastelik@gmail.com>, 2005.
-# Tomasz Dominikowski <tdominikowski@aviary.pl>, 2006, 2007, 2008, 2009.
+# Tomasz Dominikowski <tdominikowski@aviary.pl>, 2007-2009.
+# Pawel Kot <gnokii@gmail.com>, 2007.
+# Piotr Drąg <piotrdrag@gmail.com>, 2012-2015.
+# Aviary.pl <gnomepl@aviary.pl>, 2008-2015.
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-phone-manager\n"
+"Project-Id-Version: phonemgr\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-22 17:55+0200\n"
-"PO-Revision-Date: 2012-04-22 17:56+0200\n"
+"POT-Creation-Date: 2015-09-04 02:25+0200\n"
+"PO-Revision-Date: 2015-09-04 02:27+0200\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <gnomepl@aviary.pl>\n"
 "Language: pl\n"
@@ -59,7 +62,7 @@ msgstr "Książka adresowa nie istnieje."
 
 #: ../cut-n-paste/e-contact-entry/e-contact-entry.c:894
 msgid "The \"Me\" contact does not exist."
-msgstr "Kontakt \"Ja\" nie istnieje."
+msgstr "Kontakt „Ja” nie istnieje."
 
 #: ../cut-n-paste/e-contact-entry/e-contact-entry.c:896
 msgid "The address book is not loaded."
@@ -131,110 +134,85 @@ msgstr "Błąd GConf: %s"
 msgid "All further errors shown only on terminal."
 msgstr "Wszystkie dalsze błędy będą wyświetlane tylko w terminalu."
 
-#. Translators: "device" is a phone or a modem
-#: ../gnome-bluetooth/phonemgr.c:133
-msgid "Use this device with Phone Manager"
-msgstr "Użycie tego urządzenia za pomocą menedżera telefonu"
+#: ../data/gnome-phone-manager.schemas.in.h:1
+msgid "The connection type used by gnome-phone-manager"
+msgstr "Typ połączenia używany przez gnome-phone-manager"
 
-#. translators: the '%s' will be substituted with '/dev/ttyS0'
-#. or similar
-#: ../src/connection.c:124
-#, c-format
-msgid "Connected to device on %s"
-msgstr "Połączono z urządzeniem w %s"
-
-#. the ERROR signal will have been emitted, so we don't
-#. bother changing the icon ourselves at this point
-#. translators: the '%s' will be substituted with '/dev/ttyS0'
-#. or similar
-#: ../src/connection.c:130
-#, c-format
-msgid "Failed connection to device on %s"
-msgstr "Nie można połączyć z urządzeniem w %s"
-
-#: ../src/gnome-phone-manager.desktop.in.h:1 ../src/menu.c:50 ../src/menu.c:52
-msgid "Phone Manager"
-msgstr "Menedżer telefonu"
-
-#: ../src/gnome-phone-manager.desktop.in.h:2
-msgid "Receive and send text messages from your mobile phone"
-msgstr "Odbieranie i wysyłanie wiadomości z telefonu"
-
-#: ../src/icon.c:59
-msgid "Message arrived"
-msgstr "Otrzymano wiadomość"
-
-#: ../src/icon.c:62
-msgid "Connected"
-msgstr "Połączono"
-
-#: ../src/icon.c:66
-msgid "Connecting to phone"
-msgstr "Łączenie z telefonem"
-
-#: ../src/icon.c:70
-msgid "Not connected"
-msgstr "Niepołączony"
-
-#: ../src/main.c:38
-msgid "Show model name of a specific device"
-msgstr "Wyświetlanie nazwy modelu danego urządzenia"
-
-#: ../src/main.c:38 ../src/main.c:39
-msgid "PORT"
-msgstr "PORT"
-
-#: ../src/main.c:39
-msgid "Write the configuration file for gnokii debugging"
-msgstr "Zapisanie pliku konfiguracji do debugowania gnokii"
-
-#: ../src/main.c:40
-msgid "Enable debug"
-msgstr "Włączenie debugowania"
-
-#: ../src/main.c:41
-msgid "Show version information and exit"
-msgstr "Wyświetla informacje o wersji i kończy działanie"
-
-#: ../src/main.c:58
-msgid "- Manage your mobile phone"
-msgstr "- obsługa telefonu"
-
-#: ../src/main.c:72
-#, c-format
-msgid "gnome-phone-manager version %s\n"
-msgstr "gnome-phone-manager wersja %s\n"
-
-#: ../src/menu.c:43
-msgid "Send and receive messages from your mobile phone."
-msgstr "Wysyłanie i odbieranie wiadomości z telefonu."
-
-#: ../src/menu.c:55
-msgid "translator_credits"
+#: ../data/gnome-phone-manager.schemas.in.h:2
+msgid ""
+"The connection type used by gnome-phone-manager: Bluetooth is 0 Serial 1 is "
+"1 Serial 2 is 2 IrDa is 3 Other connection types are 4"
 msgstr ""
-"Michał Kastelik <mkastelik@gmail.com>, 2005\n"
-"Aviary.pl <gnomepl@aviary.pl>, 2009, 2012\n"
-"Tomasz Dominikowski <tdominikowski@aviary.pl>, 2006, 2007, 2008, 2009"
+"Typ połączenia używany przez gnome-phone-manager: Bluetooth — 0, port "
+"szeregowy 1 — 1, port szeregowy 2 — 2, podczerwień — 3, inny rodzaj — 4."
 
-#: ../src/menu.c:57
-msgid "Phone Manager website"
-msgstr "Witryna menedżera telefonu"
+#: ../data/gnome-phone-manager.schemas.in.h:3
+msgid "Bluetooth address of the device to connect to"
+msgstr "Adres Bluetooth urządzenia do połączenia"
 
-#: ../src/menu.c:88
-msgid "_Send Message"
-msgstr "_Wyślij wiadomość"
+#: ../data/gnome-phone-manager.schemas.in.h:4
+msgid ""
+"Bluetooth address of the device to connect to. Requires connection_type to "
+"be 1 to be used."
+msgstr ""
+"Adres Bluetooth urządzenia do połączenia. Wymaga wartości „1” klucza "
+"„connection_type”."
 
-#: ../src/ui.c:110
-msgid "New text message received"
-msgstr "Otrzymano nową wiadomość tekstową"
+#: ../data/gnome-phone-manager.schemas.in.h:5
+msgid "The device node for the serial device to connect to"
+msgstr "Węzeł urządzenia do połączenia urządzenia szeregowego"
 
-#: ../src/ui.c:276
-msgid "Message too long!"
-msgstr "Wiadomość jest za długa."
+#: ../data/gnome-phone-manager.schemas.in.h:6
+msgid ""
+"The device node for the serial device to connect to. Requires "
+"connection_type to be 4 to be used."
+msgstr ""
+"Węzeł urządzenia do połączenia urządzenia szeregowego. Wymaga wartości „4” "
+"klucza „connection_type”."
 
-#: ../telepathy/main.c:44
-msgid "Make all warnings fatal"
-msgstr "Wszystkie ostrzeżenia są krytyczne"
+#: ../data/gnome-phone-manager.schemas.in.h:7
+msgid "Whether to retry connecting to the mobile phone"
+msgstr "Określa, czy podejmować próby ponownego połączenia z telefonem"
+
+#: ../data/gnome-phone-manager.schemas.in.h:8
+msgid ""
+"Whether to retry connecting to the mobile phone if the connection fails at "
+"some point."
+msgstr ""
+"Określa, czy podejmować próby ponownego połączenia z telefonem, jeśli "
+"połączenie zawiedzie."
+
+#: ../data/gnome-phone-manager.schemas.in.h:9
+msgid "Whether to synchronise the phone clock with the computer's"
+msgstr "Określa, czy synchronizować zegar telefonu z zegarem komputera"
+
+#: ../data/gnome-phone-manager.schemas.in.h:10
+msgid "Whether to synchronise the phone clock with the computer's."
+msgstr "Określa, czy synchronizować zegar telefonu z zegarem komputera."
+
+#: ../data/gnome-phone-manager.schemas.in.h:11
+msgid "Whether to popup new messages on the desktop"
+msgstr "Określa, czy wyświetlać nowe wiadomości na pulpicie"
+
+#: ../data/gnome-phone-manager.schemas.in.h:12
+msgid ""
+"Whether to popup new messages on the desktop as soon as they're received, as "
+"opposed to showing them when clicking on the tray icon."
+msgstr ""
+"Określa, czy wyświetlać nowe wyskakujące powiadomienia na pulpicie tak "
+"szybko jak się pojawią, zamiast wyświetlania po kliknięciu ikony w zasobniku."
+
+#: ../data/gnome-phone-manager.schemas.in.h:13
+msgid "Whether to play a sound alert when a new message comes in"
+msgstr ""
+"Określa, czy odtwarzać dźwięk ostrzegawczy podczas otrzymywania nowej "
+"wiadomości"
+
+#: ../data/gnome-phone-manager.schemas.in.h:14
+msgid "Whether to play a sound alert when a new message comes in."
+msgstr ""
+"Określa, czy odtwarzać dźwięk ostrzegawczy podczas otrzymywania nowej "
+"wiadomości."
 
 #: ../data/phonemgr.ui.h:1
 msgid "Message Received"
@@ -280,7 +258,7 @@ msgstr "Proszę wprowadzić tekst wiadomości do wysłania."
 msgid "Characters left:"
 msgstr "Pozostało znaków:"
 
-#. This is a receipt from the SMS server saying the message has been delivered to the recipient's phone
+#. This is a receipt from the SMS server saying the message has been delivered to the recipient
 #: ../data/phonemgr.ui.h:13
 msgid "_Notify when message is delivered"
 msgstr "_Powiadamianie, gdy wiadomość zostanie dostarczona"
@@ -299,11 +277,11 @@ msgstr "Powiadamianie"
 
 #: ../data/phonemgr.ui.h:17
 msgid "_Pop-up window for new messages"
-msgstr "_Wyświetlanie powiadomienia dla nowych wiadomości"
+msgstr "_Powiadomienie dla nowych wiadomości"
 
 #: ../data/phonemgr.ui.h:18
 msgid "Play _sound when messages arrive"
-msgstr "Odtwarzanie _dźwięku, gdy nadejdzie wiadomość"
+msgstr "_Dźwięk, gdy nadejdzie wiadomość"
 
 #: ../data/phonemgr.ui.h:19
 msgid "Interface"
@@ -389,83 +367,109 @@ msgstr "Synchronizuje czas i datę telefonu z zegarem komputera"
 msgid "Connection"
 msgstr "Połączenie"
 
-#: ../data/gnome-phone-manager.schemas.in.h:1
-msgid "The connection type used by gnome-phone-manager"
-msgstr "Typ połączenia używany przez gnome-phone-manager"
+#. Translators: "device" is a phone or a modem
+#: ../gnome-bluetooth/phonemgr.c:133
+msgid "Use this device with Phone Manager"
+msgstr "Użycie tego urządzenia za pomocą menedżera telefonu"
 
-#: ../data/gnome-phone-manager.schemas.in.h:2
-msgid ""
-"The connection type used by gnome-phone-manager: Bluetooth is 0 Serial 1 is "
-"1 Serial 2 is 2 IrDa is 3 Other connection types are 4"
+#: ../libgsm/glibgsmtest.c:137 ../src/main.c:55
+msgid "- Manage your mobile phone"
+msgstr "— obsługa telefonu"
+
+#. translators: the '%s' will be substituted with '/dev/ttyS0'
+#. or similar
+#: ../src/connection.c:122
+#, c-format
+msgid "Connected to device on %s"
+msgstr "Połączono z urządzeniem w %s"
+
+#. the ERROR signal will have been emitted, so we don't
+#. bother changing the icon ourselves at this point
+#. translators: the '%s' will be substituted with '/dev/ttyS0'
+#. or similar
+#: ../src/connection.c:128
+#, c-format
+msgid "Failed connection to device on %s"
+msgstr "Nie można połączyć z urządzeniem w %s"
+
+#: ../src/gnome-phone-manager.desktop.in.h:1 ../src/icon.c:81 ../src/menu.c:48
+msgid "Phone Manager"
+msgstr "Menedżer telefonu"
+
+#: ../src/gnome-phone-manager.desktop.in.h:2
+msgid "Receive and send text messages from your mobile phone"
+msgstr "Odbieranie i wysyłanie wiadomości z telefonu"
+
+#: ../src/icon.c:58
+msgid "Message arrived"
+msgstr "Otrzymano wiadomość"
+
+#: ../src/icon.c:61
+msgid "Connected"
+msgstr "Połączono"
+
+#: ../src/icon.c:65
+msgid "Connecting to phone"
+msgstr "Łączenie z telefonem"
+
+#: ../src/icon.c:69
+msgid "Not connected"
+msgstr "Niepołączony"
+
+#: ../src/main.c:37
+msgid "Show model name of a specific device"
+msgstr "Wyświetlanie nazwy modelu danego urządzenia"
+
+#: ../src/main.c:37 ../src/main.c:38
+msgid "PORT"
+msgstr "PORT"
+
+#: ../src/main.c:38
+msgid "Write the configuration file for gnokii debugging"
+msgstr "Zapisanie pliku konfiguracji do debugowania gnokii"
+
+#: ../src/main.c:39
+msgid "Enable debug"
+msgstr "Włączenie debugowania"
+
+#: ../src/main.c:40
+msgid "Show version information and exit"
+msgstr "Wyświetla informacje o wersji i kończy działanie"
+
+#: ../src/main.c:69
+#, c-format
+msgid "gnome-phone-manager version %s\n"
+msgstr "gnome-phone-manager w wersji %s\n"
+
+#: ../src/menu.c:42
+msgid "Send and receive messages from your mobile phone."
+msgstr "Wysyłanie i odbieranie wiadomości z telefonu."
+
+#: ../src/menu.c:50
+msgid "translator_credits"
 msgstr ""
-"Typ połączenia używany przez gnome-phone-manager: Bluetooth - 0, port "
-"szeregowy 1 - 1, port szeregowy 2 - 2, podczerwień - 3, inny rodzaj - 4."
+"Michał Kastelik <mkastelik@gmail.com>, 2005\n"
+"Tomasz Dominikowski <tdominikowski@aviary.pl>, 2007-2009\n"
+"Pawel Kot <gnokii@gmail.com>, 2007\n"
+"Piotr Drąg <piotrdrag@gmail.com>, 2012-2015\n"
+"Aviary.pl <gnomepl@aviary.pl>, 2008-2015"
 
-#: ../data/gnome-phone-manager.schemas.in.h:3
-msgid "Bluetooth address of the device to connect to"
-msgstr "Adres Bluetooth urządzenia do połączenia"
+#: ../src/menu.c:52
+msgid "Phone Manager website"
+msgstr "Witryna menedżera telefonu"
 
-#: ../data/gnome-phone-manager.schemas.in.h:4
-msgid ""
-"Bluetooth address of the device to connect to. Requires connection_type to "
-"be 1 to be used."
-msgstr ""
-"Adres Bluetooth urządzenia do połączenia. Wymaga wartości \"1\" klucza "
-"\"connection_type\"."
+#: ../src/menu.c:83
+msgid "_Send Message"
+msgstr "_Wyślij wiadomość"
 
-#: ../data/gnome-phone-manager.schemas.in.h:5
-msgid "The device node for the serial device to connect to"
-msgstr "Węzeł urządzenia do połączenia urządzenia szeregowego"
+#: ../src/ui.c:109
+msgid "New text message received"
+msgstr "Otrzymano nową wiadomość tekstową"
 
-#: ../data/gnome-phone-manager.schemas.in.h:6
-msgid ""
-"The device node for the serial device to connect to. Requires "
-"connection_type to be 4 to be used."
-msgstr ""
-"Węzeł urządzenia do połączenia urządzenia szeregowego. Wymaga wartości \"4\" "
-"klucza \"connection_type\"."
+#: ../src/ui.c:285
+msgid "Message too long!"
+msgstr "Wiadomość jest za długa."
 
-#: ../data/gnome-phone-manager.schemas.in.h:7
-msgid "Whether to retry connecting to the mobile phone"
-msgstr "Określa, czy podejmować próby ponownego połączenia z telefonem"
-
-#: ../data/gnome-phone-manager.schemas.in.h:8
-msgid ""
-"Whether to retry connecting to the mobile phone if the connection fails at "
-"some point."
-msgstr ""
-"Określa, czy podejmować próby ponownego połączenia z telefonem, jeśli "
-"połączenie zawiedzie."
-
-#: ../data/gnome-phone-manager.schemas.in.h:9
-msgid "Whether to synchronise the phone clock with the computer's"
-msgstr "Określa, czy synchronizować zegar telefonu z zegarem komputera"
-
-#: ../data/gnome-phone-manager.schemas.in.h:10
-msgid "Whether to synchronise the phone clock with the computer's."
-msgstr "Określa, czy synchronizować zegar telefonu z zegarem komputera."
-
-#: ../data/gnome-phone-manager.schemas.in.h:11
-msgid "Whether to popup new messages on the desktop"
-msgstr "Określa, czy wyświetlać nowe wiadomości na pulpicie"
-
-#: ../data/gnome-phone-manager.schemas.in.h:12
-msgid ""
-"Whether to popup new messages on the desktop as soon as they're received, as "
-"opposed to showing them when clicking on the tray icon."
-msgstr ""
-"Określa, czy wyświetlać nowe wyskakujące powiadomienia na pulpicie tak "
-"szybko jak się pojawią, zamiast wyświetlania po kliknięciu w ikonę w "
-"zasobniku."
-
-#: ../data/gnome-phone-manager.schemas.in.h:13
-msgid "Whether to play a sound alert when a new message comes in"
-msgstr ""
-"Określa, czy odtwarzać dźwięk ostrzegawczy podczas otrzymywania nowej "
-"wiadomości"
-
-#: ../data/gnome-phone-manager.schemas.in.h:14
-msgid "Whether to play a sound alert when a new message comes in."
-msgstr ""
-"Określa, czy odtwarzać dźwięk ostrzegawczy podczas otrzymywania nowej "
-"wiadomości."
+#: ../telepathy/main.c:44
+msgid "Make all warnings fatal"
+msgstr "Wszystkie ostrzeżenia są krytyczne"
