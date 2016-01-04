@@ -3,21 +3,23 @@
 # This file is distributed under the same license as the phonemgr package.
 # Hendrik Brandt <heb@gnome-de.org>, 2004-2005.
 # Jens Seidel <jseidel@cvs.gnome.org>, 2005.
-# Mario Blättermann <mariobl@gnome.org>, 2009-2011.
+# Mario Blättermann <mario.blaettermann@gmail.com>, 2009-2011, 2016.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: phonemgr master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
-"phone-manager&component=general\n"
-"POT-Creation-Date: 2011-02-15 20:00+0000\n"
-"PO-Revision-Date: 2011-02-26 22:23+0100\n"
-"Last-Translator: Mario Blättermann <mariobl@gnome.org>\n"
+"phone-manager&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2013-12-19 16:09+0000\n"
+"PO-Revision-Date: 2016-01-04 14:48+0100\n"
+"Last-Translator: Mario Blättermann <mario.blaettermann@gmail.com>\n"
 "Language-Team: German <gnome-de@gnome.org>\n"
+"Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 1.8.6\n"
 
 #: ../cut-n-paste/e-contact-entry/e-contact-entry.c:153
 #, c-format
@@ -33,88 +35,89 @@ msgstr "Kontakt konnte nicht gefunden werden: %s"
 msgid "Cannot create searchable view."
 msgstr "Durchsuchbare Ansicht konnte nicht erstellt werden."
 
-#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:886
+#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:884
 msgid "Success"
 msgstr "Erfolg"
 
-#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:888
+#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:886
 msgid "An argument was invalid."
 msgstr "Ein Argument war ungültig."
 
-#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:890
+#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:888
 msgid "The address book is busy."
 msgstr "Das Adressbuch ist beschäftigt."
 
-#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:892
+#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:890
 msgid "The address book is offline."
 msgstr "Das Adressbuch ist inaktiv."
 
-#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:894
+#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:892
 msgid "The address book does not exist."
 msgstr "Das Adressbuch existiert nicht."
 
-#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:896
+#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:894
 msgid "The \"Me\" contact does not exist."
 msgstr "Der Kontakt »Ich« existiert nicht."
 
-#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:898
+#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:896
 msgid "The address book is not loaded."
 msgstr "Das Adressbuch ist nicht geladen."
 
-#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:900
+#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:898
 msgid "The address book is already loaded."
 msgstr "Das Adressbuch ist bereits geladen."
 
-#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:902
+#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:900
 msgid "Permission was denied when accessing the address book."
 msgstr ""
 "Der Zugriff wurde beim Versuch verweigert, auf das Adressbuch zuzugreifen."
 
-#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:904
+#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:902
 msgid "The contact was not found."
 msgstr "Der Kontakt wurde nicht gefunden."
 
-#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:906
+#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:904
 msgid "This contact ID already exists."
 msgstr "Diese Kontaktkennung existiert bereits."
 
-#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:908
+#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:906
 msgid "The protocol is not supported."
 msgstr "Das Protokoll wird nicht unterstützt."
 
-#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:910
+#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:908
 msgid "The operation was cancelled."
 msgstr "Der Vorgang wurde abgebrochen."
 
-#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:912
+#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:910
 msgid "The operation could not be cancelled."
 msgstr "Der Vorgang konnte nicht abgebrochen werden."
 
-#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:914
+#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:912
 msgid "The address book authentication failed."
 msgstr "Die Legitimierung am Adressbuch ist fehlgeschlagen."
 
-#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:916
-msgid "Authentication is required to access the address book and was not given."
+#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:914
+msgid ""
+"Authentication is required to access the address book and was not given."
 msgstr ""
 "Um auf das Adressbuch zuzugreifen, ist eine Legitimierung nötig, diese wurde "
 "nicht übergeben."
 
-#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:918
+#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:916
 msgid "A secure connection is not available."
 msgstr "Eine sichere Verbindung steht nicht zur Verfügung."
 
-#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:920
+#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:918
 msgid "A CORBA error occurred whilst accessing the address book."
 msgstr ""
 "Während des Zugriffs auf das Adressbuch ist ein CORBA-Fehler aufgetreten."
 
-#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:922
+#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:920
 msgid "The address book source does not exist."
 msgstr "Die Adressbuchquelle existiert nicht."
 
-#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:924
-#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:927
+#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:922
+#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:925
 msgid "An unknown error occurred."
 msgstr "Es ist ein unbekannter Fehler aufgetreten."
 
@@ -127,14 +130,256 @@ msgstr "GConf-Fehler: %s"
 msgid "All further errors shown only on terminal."
 msgstr "Alle weiteren Fehlermeldungen werden nur im Terminal angezeigt."
 
+#: ../data/gnome-phone-manager.schemas.in.h:1
+msgid "The connection type used by gnome-phone-manager"
+msgstr "Zu verwendender Verbindungstyp"
+
+#: ../data/gnome-phone-manager.schemas.in.h:2
+msgid ""
+"The connection type used by gnome-phone-manager: Bluetooth is 0 Serial 1 is "
+"1 Serial 2 is 2 IrDa is 3 Other connection types are 4"
+msgstr ""
+"Der von gnome-phone-manager zu verwendende Verbindungstyp: Bluetooth ist 0, "
+"seriell 1 ist 1, seriell 2 ist 2, IrDa ist 3, andere Verbindungstypen sind 4"
+
+#: ../data/gnome-phone-manager.schemas.in.h:3
+msgid "Bluetooth address of the device to connect to"
+msgstr "Bluetooth-Adresse des zu verbindenden Geräts"
+
+#: ../data/gnome-phone-manager.schemas.in.h:4
+msgid ""
+"Bluetooth address of the device to connect to. Requires connection_type to "
+"be 1 to be used."
+msgstr ""
+"Bluetooth-Adresse des zu verbindenden Geräts. »connection_type« muss dafür "
+"auf 1 gesetzt werden."
+
+#: ../data/gnome-phone-manager.schemas.in.h:5
+msgid "The device node for the serial device to connect to"
+msgstr "Serieller Geräteknoten"
+
+#: ../data/gnome-phone-manager.schemas.in.h:6
+msgid ""
+"The device node for the serial device to connect to. Requires "
+"connection_type to be 4 to be used."
+msgstr ""
+"Der für die Verbindung zum seriellen Gerät zu verwendende Geräteknoten. "
+"»connection_type« muss dafür auf 4 gesetzt werden."
+
+#: ../data/gnome-phone-manager.schemas.in.h:7
+msgid "Whether to retry connecting to the mobile phone"
+msgstr "Wiederverbinden mit dem Mobiltelefon"
+
+#: ../data/gnome-phone-manager.schemas.in.h:8
+msgid ""
+"Whether to retry connecting to the mobile phone if the connection fails at "
+"some point."
+msgstr ""
+"Legt fest, ob die Verbindung mit dem Mobiltelefon erneut versucht werden "
+"soll, wenn die Verbindung scheiterte."
+
+#: ../data/gnome-phone-manager.schemas.in.h:9
+msgid "Whether to synchronise the phone clock with the computer's"
+msgstr "Abgleich der Telefon-Uhr mit der Rechner-Uhr"
+
+#: ../data/gnome-phone-manager.schemas.in.h:10
+msgid "Whether to synchronise the phone clock with the computer's."
+msgstr ""
+"Legt fest, ob die Uhr des Telefons mit der des Rechners abgeglichen werden "
+"soll."
+
+#: ../data/gnome-phone-manager.schemas.in.h:11
+msgid "Whether to popup new messages on the desktop"
+msgstr "Arbeitsflächen-Benachrichtigungen"
+
+#: ../data/gnome-phone-manager.schemas.in.h:12
+msgid ""
+"Whether to popup new messages on the desktop as soon as they're received, as "
+"opposed to showing them when clicking on the tray icon."
+msgstr ""
+"Legt fest, ob auf der Arbeitsfläche Benachrichtigungen erscheinen sollen, "
+"sobald diese empfangen werden, im Gegensatz zum Aufruf der Nachricht über "
+"das Symbol im Benachrichtigungsfeld."
+
+#: ../data/gnome-phone-manager.schemas.in.h:13
+msgid "Whether to play a sound alert when a new message comes in"
+msgstr "Klang abspielen bei eingehenden Nachrichten"
+
+#: ../data/gnome-phone-manager.schemas.in.h:14
+msgid "Whether to play a sound alert when a new message comes in."
+msgstr ""
+"Legt fest, ob bei eingehenden Nachrichten ein Klang abgespielt werden soll."
+
+#: ../data/phonemgr.ui.h:1
+msgid "Message Received"
+msgstr "Nachricht erhalten"
+
+#: ../data/phonemgr.ui.h:2
+msgid "You have received a message"
+msgstr "Sie haben eine Nachricht erhalten"
+
+#: ../data/phonemgr.ui.h:3
+msgid "Sender:"
+msgstr "Sender:"
+
+#: ../data/phonemgr.ui.h:4
+msgid "Date:"
+msgstr "Datum:"
+
+#: ../data/phonemgr.ui.h:5
+msgid "_Reply"
+msgstr "_Antworten"
+
+#: ../data/phonemgr.ui.h:6
+msgid "Send Message"
+msgstr "Nachricht versenden"
+
+#: ../data/phonemgr.ui.h:7
+msgid "Enter your text message"
+msgstr "Bitte geben Sie Ihre Textnachricht ein"
+
+#: ../data/phonemgr.ui.h:8
+msgid "_Recipient:"
+msgstr "_Empfänger:"
+
+#: ../data/phonemgr.ui.h:9
+msgid "_Message:"
+msgstr "_Nachricht:"
+
+#: ../data/phonemgr.ui.h:10
+msgid "Enter the text message you want to send."
+msgstr "Bitte geben Sie die zu verschickende Textnachricht ein."
+
+#: ../data/phonemgr.ui.h:11
+msgid "Characters left:"
+msgstr "Verbleibende Zeichen:"
+
+#. This is a receipt from the SMS server saying the message has been delivered to the recipient's phone
+#: ../data/phonemgr.ui.h:13
+msgid "_Notify when message is delivered"
+msgstr "Be_nachrichtigen, wenn eine neue Nachricht eintrifft"
+
+#: ../data/phonemgr.ui.h:14
+msgid "_Send"
+msgstr "_Senden"
+
+#: ../data/phonemgr.ui.h:15
+msgid "Phone Manager Preferences"
+msgstr "Einstellungen der Telefonverwaltung"
+
+#: ../data/phonemgr.ui.h:16
+msgid "Alerting"
+msgstr "Benachrichtigung"
+
+#: ../data/phonemgr.ui.h:17
+msgid "_Pop-up window for new messages"
+msgstr "_Dialogfenster für neue Nachrichten"
+
+#: ../data/phonemgr.ui.h:18
+msgid "Play _sound when messages arrive"
+msgstr "Einen _Klang abspielen, wenn eine neue Nachricht eintrifft"
+
+#: ../data/phonemgr.ui.h:19
+msgid "Interface"
+msgstr "Schnittstelle"
+
+#: ../data/phonemgr.ui.h:20
+msgid "Phone Connection"
+msgstr "Telefonverbindung"
+
+#: ../data/phonemgr.ui.h:21
+msgid "_Bluetooth"
+msgstr "_Bluetooth"
+
+#: ../data/phonemgr.ui.h:22
+msgid "Use Bluetooth wireless networking to connect to your phone"
+msgstr ""
+"Wenn diese Option ausgewählt ist, wird das drahtlose Bluetooth-Netzwerk "
+"verwendet, um eine Verbindung mit Ihrem Telefon herzustellen"
+
+#: ../data/phonemgr.ui.h:23
+msgid "Serial port _1 (/dev/ttyS0)"
+msgstr "Serielle Schnittstelle _1 (/dev/ttyS0)"
+
+#: ../data/phonemgr.ui.h:24
+msgid "Connect using serial port 1, also known as COM1 or /dev/ttyS0"
+msgstr ""
+"Zum Verbinden die serielle Schnittstelle 1 verwenden (auch COM1 oder /dev/"
+"ttyS0)"
+
+#: ../data/phonemgr.ui.h:25
+msgid "Serial port _2 (/dev/ttyS1)"
+msgstr "Serielle Schnittstelle _2 (/dev/ttyS1)"
+
+#: ../data/phonemgr.ui.h:26
+msgid "Connect using serial port 2, also known as COM2 or /dev/ttyS1"
+msgstr ""
+"Zum Verbinden die serielle Schnittstelle 2 verwenden (auch COM2 oder /dev/"
+"ttyS1)"
+
+#: ../data/phonemgr.ui.h:27
+msgid "I_nfra red (/dev/ircomm0)"
+msgstr "_Infrarot (/dev/ircomm0)"
+
+#: ../data/phonemgr.ui.h:28
+msgid "Connect using infrared communication"
+msgstr "Zum Verbinden die Infrarotschnittstelle verwenden"
+
+#: ../data/phonemgr.ui.h:29
+msgid "Other _port"
+msgstr "Anderer _Port"
+
+#: ../data/phonemgr.ui.h:30
+msgid "Connect using an alternative serial device"
+msgstr "Zum Verbinden ein anderes serielles Gerät verwenden"
+
+#: ../data/phonemgr.ui.h:31
+msgid "Alternative device filename, e.g. /dev/ttyS3"
+msgstr "Anderer Gerätename, z.B. /dev/ttyS3"
+
+#: ../data/phonemgr.ui.h:32
+msgid "Automated Tasks"
+msgstr "Automatisierte Aufgaben"
+
+#: ../data/phonemgr.ui.h:33
+msgid "Automatically _retry connections"
+msgstr "Verbindung automatisch wieder herstellen"
+
+#: ../data/phonemgr.ui.h:34
+msgid ""
+"Always try and reconnect whenever a connection is not immediately available. "
+"Use this with Bluetooth to ensure your phone connects whenever it comes in "
+"range."
+msgstr ""
+"Immer versuchen eine Verbindung wieder herzustellen, wenn diese nicht sofort "
+"zur Verfügung steht. Wählen Sie diese Option, wenn Sie sicher gehen wollen, "
+"dass Ihr Telefon jedes Mal verbunden wird, sobald es in Bluetooth-Reichweite "
+"kommt."
+
+#: ../data/phonemgr.ui.h:35
+msgid "Synchronise phone's _time and date"
+msgstr "Zei_t und Datum des Mobiltelefons abgleichen"
+
+#: ../data/phonemgr.ui.h:36
+msgid "Synchronise phone's time and date with the computer's clock"
+msgstr "Abgleich der Uhr des Telefons mit der des Rechners"
+
+#: ../data/phonemgr.ui.h:37
+msgid "Connection"
+msgstr "Verbindung"
+
 #. Translators: "device" is a phone or a modem
 #: ../gnome-bluetooth/phonemgr.c:133
 msgid "Use this device with Phone Manager"
 msgstr "Dieses Gerät mit der Telefonverwaltung verwenden"
 
+#: ../libgsm/glibgsmtest.c:138 ../src/main.c:56
+msgid "- Manage your mobile phone"
+msgstr "- Verwalten Ihres Mobiltelefons"
+
 #. translators: the '%s' will be substituted with '/dev/ttyS0'
 #. or similar
-#: ../src/connection.c:124
+#: ../src/connection.c:123
 #, c-format
 msgid "Connected to device on %s"
 msgstr "Verbunden mit einem Gerät auf %s"
@@ -143,12 +388,12 @@ msgstr "Verbunden mit einem Gerät auf %s"
 #. bother changing the icon ourselves at this point
 #. translators: the '%s' will be substituted with '/dev/ttyS0'
 #. or similar
-#: ../src/connection.c:130
+#: ../src/connection.c:129
 #, c-format
 msgid "Failed connection to device on %s"
 msgstr "Die Verbindung mit einem Gerät auf %s ist fehlgeschlagen"
 
-#: ../src/gnome-phone-manager.desktop.in.h:1 ../src/menu.c:49 ../src/menu.c:51
+#: ../src/gnome-phone-manager.desktop.in.h:1 ../src/icon.c:82 ../src/menu.c:49
 msgid "Phone Manager"
 msgstr "Telefonverwaltung"
 
@@ -192,276 +437,38 @@ msgstr "Debugging aktivieren"
 msgid "Show version information and exit"
 msgstr "Versionsinformationen anzeigen und beenden"
 
-#: ../src/main.c:60
-msgid "- Manage your mobile phone"
-msgstr "- Verwalten Ihres Mobiltelefons"
-
-#: ../src/main.c:74
+#: ../src/main.c:70
 #, c-format
 msgid "gnome-phone-manager version %s\n"
 msgstr "gnome-phone-manager version %s\n"
 
-#: ../src/menu.c:40
+#: ../src/menu.c:43
+msgid "Send and receive messages from your mobile phone."
+msgstr "Empfangen und senden Sie Textnachrichten über Ihr Mobiltelefon"
+
+#: ../src/menu.c:51
 msgid "translator_credits"
 msgstr ""
 "Hendrik Brandt <heb@gnome-de.org>\n"
 "Jens Seidel <jseidel@cvs.gnome.org>\n"
-"Mario Blättermann <mariobl@gnome.org>"
+"Mario Blättermann <mario.blaettermann@gmail.com>"
 
-#: ../src/menu.c:44
-msgid "Send and receive messages from your mobile phone."
-msgstr "Empfangen und senden Sie Textnachrichten über Ihr Mobiltelefon"
-
-#: ../src/menu.c:56
+#: ../src/menu.c:53
 msgid "Phone Manager website"
 msgstr "Phone-Manager-Webseite"
 
-#: ../src/menu.c:87
+#: ../src/menu.c:84
 msgid "_Send Message"
 msgstr "Nachrichten _senden"
 
-#: ../src/ui.c:111
+#: ../src/ui.c:110
 msgid "New text message received"
 msgstr "Neue Nachricht erhalten"
 
-#: ../src/ui.c:277
+#: ../src/ui.c:286
 msgid "Message too long!"
 msgstr "Ihre Nachricht ist zu lang!"
 
-#: ../data/phonemgr.ui.h:1
-msgid "Alerting"
-msgstr "Benachrichtigung"
-
-#: ../data/phonemgr.ui.h:2
-msgid "Alternative device filename, e.g. /dev/ttyS3"
-msgstr "Anderer Gerätename, z.B. /dev/ttyS3"
-
-#: ../data/phonemgr.ui.h:3
-msgid ""
-"Always try and reconnect whenever a connection is not immediately available. "
-"Use this with Bluetooth to ensure your phone connects whenever it comes in "
-"range."
-msgstr ""
-"Immer versuchen eine Verbindung wieder herzustellen, wenn diese nicht sofort "
-"zur Verfügung steht. Wählen Sie diese Option, wenn Sie sicher gehen wollen, "
-"dass Ihr Telefon jedes Mal verbunden wird, sobald es in Bluetooth-Reichweite "
-"kommt."
-
-#: ../data/phonemgr.ui.h:4
-msgid "Automated Tasks"
-msgstr "Automatisierte Aufgaben"
-
-#: ../data/phonemgr.ui.h:5
-msgid "Automatically _retry connections"
-msgstr "Verbindung automatisch wieder herstellen"
-
-#: ../data/phonemgr.ui.h:6
-msgid "Characters left:"
-msgstr "Verbleibende Zeichen:"
-
-#: ../data/phonemgr.ui.h:7
-msgid "Connect using an alternative serial device"
-msgstr "Zum Verbinden ein anderes serielles Gerät verwenden"
-
-#: ../data/phonemgr.ui.h:8
-msgid "Connect using infrared communication"
-msgstr "Zum Verbinden die Infrarotschnittstelle verwenden"
-
-#: ../data/phonemgr.ui.h:9
-msgid "Connect using serial port 1, also known as COM1 or /dev/ttyS0"
-msgstr ""
-"Zum Verbinden die serielle Schnittstelle 1 verwenden (auch COM1 oder /dev/"
-"ttyS0)"
-
-#: ../data/phonemgr.ui.h:10
-msgid "Connect using serial port 2, also known as COM2 or /dev/ttyS1"
-msgstr ""
-"Zum Verbinden die serielle Schnittstelle 2 verwenden (auch COM2 oder /dev/"
-"ttyS1)"
-
-#: ../data/phonemgr.ui.h:11
-msgid "Connection"
-msgstr "Verbindung"
-
-#: ../data/phonemgr.ui.h:12
-msgid "Date:"
-msgstr "Datum:"
-
-#: ../data/phonemgr.ui.h:13
-msgid "Enter the text message you want to send."
-msgstr "Bitte geben Sie die zu verschickende Textnachricht ein."
-
-#: ../data/phonemgr.ui.h:14
-msgid "Enter your text message"
-msgstr "Bitte geben Sie Ihre Textnachricht ein"
-
-#: ../data/phonemgr.ui.h:15
-msgid "I_nfra red (/dev/ircomm0)"
-msgstr "_Infrarot (/dev/ircomm0)"
-
-#: ../data/phonemgr.ui.h:16
-msgid "Interface"
-msgstr "Schnittstelle"
-
-#: ../data/phonemgr.ui.h:17
-msgid "Message Received"
-msgstr "Nachricht erhalten"
-
-#: ../data/phonemgr.ui.h:18
-msgid "Other _port"
-msgstr "Anderer _Port"
-
-#: ../data/phonemgr.ui.h:19
-msgid "Phone Connection"
-msgstr "Telefonverbindung"
-
-#: ../data/phonemgr.ui.h:20
-msgid "Phone Manager Preferences"
-msgstr "Einstellungen der Telefonverwaltung"
-
-#: ../data/phonemgr.ui.h:21
-msgid "Play _sound when messages arrive"
-msgstr "Einen _Klang abspielen, wenn eine neue Nachricht eintrifft"
-
-#: ../data/phonemgr.ui.h:22
-msgid "Send Message"
-msgstr "Nachricht versenden"
-
-#: ../data/phonemgr.ui.h:23
-msgid "Sender:"
-msgstr "Sender:"
-
-#: ../data/phonemgr.ui.h:24
-msgid "Serial port _1 (/dev/ttyS0)"
-msgstr "Serielle Schnittstelle _1 (/dev/ttyS0)"
-
-#: ../data/phonemgr.ui.h:25
-msgid "Serial port _2 (/dev/ttyS1)"
-msgstr "Serielle Schnittstelle _2 (/dev/ttyS1)"
-
-#: ../data/phonemgr.ui.h:26
-msgid "Synchronise phone's _time and date"
-msgstr "Zei_t und Datum des Mobiltelefons abgleichen"
-
-#: ../data/phonemgr.ui.h:27
-msgid "Synchronise phone's time and date with the computer's clock"
-msgstr "Abgleich der Uhr des Telefons mit der des Rechners"
-
-#: ../data/phonemgr.ui.h:28
-msgid "Use Bluetooth wireless networking to connect to your phone"
-msgstr ""
-"Wenn diese Option ausgewählt ist, wird das drahtlose Bluetooth-Netzwerk "
-"verwendet, um eine Verbindung mit Ihrem Telefon herzustellen"
-
-#: ../data/phonemgr.ui.h:29
-msgid "You have received a message"
-msgstr "Sie haben eine Nachricht erhalten"
-
-#: ../data/phonemgr.ui.h:30
-msgid "_Bluetooth"
-msgstr "_Bluetooth"
-
-#: ../data/phonemgr.ui.h:31
-msgid "_Message:"
-msgstr "_Nachricht:"
-
-#. This is a receipt from the SMS server saying the message has been delivered to the recipient's phone
-#: ../data/phonemgr.ui.h:33
-msgid "_Notify when message is delivered"
-msgstr "Be_nachrichtigen, wenn eine neue Nachricht eintrifft"
-
-#: ../data/phonemgr.ui.h:34
-msgid "_Pop-up window for new messages"
-msgstr "_Dialogfenster für neue Nachrichten"
-
-#: ../data/phonemgr.ui.h:35
-msgid "_Recipient:"
-msgstr "_Empfänger:"
-
-#: ../data/phonemgr.ui.h:36
-msgid "_Reply"
-msgstr "_Antworten"
-
-#: ../data/phonemgr.ui.h:37
-msgid "_Send"
-msgstr "_Senden"
-
-#: ../data/gnome-phone-manager.schemas.in.h:1
-msgid "Bluetooth address of the device to connect to"
-msgstr "Bluetooth-Adresse des zu verbindenden Geräts"
-
-#: ../data/gnome-phone-manager.schemas.in.h:2
-msgid ""
-"Bluetooth address of the device to connect to. Requires connection_type to be "
-"1 to be used."
-msgstr ""
-"Bluetooth-Adresse des zu verbindenden Geräts. »connection_type« muss dafür "
-"auf 1 gesetzt werden."
-
-#: ../data/gnome-phone-manager.schemas.in.h:3
-msgid "The connection type used by gnome-phone-manager"
-msgstr "Zu verwendender Verbindungstyp"
-
-#: ../data/gnome-phone-manager.schemas.in.h:4
-msgid ""
-"The connection type used by gnome-phone-manager: Bluetooth is 0 Serial 1 is 1 "
-"Serial 2 is 2 IrDa is 3 Other connection types are 4"
-msgstr ""
-"Der von gnome-phone-manager zu verwendende Verbindungstyp: Bluetooth ist 0, "
-"seriell 1 ist 1, seriell 2 ist 2, IrDa ist 3, andere Verbindungstypen sind 4"
-
-#: ../data/gnome-phone-manager.schemas.in.h:5
-msgid "The device node for the serial device to connect to"
-msgstr "Serieller Geräteknoten"
-
-#: ../data/gnome-phone-manager.schemas.in.h:6
-msgid ""
-"The device node for the serial device to connect to. Requires connection_type "
-"to be 4 to be used."
-msgstr ""
-"Der für die Verbindung zum seriellen Gerät zu verwendende Geräteknoten. "
-"»connection_type« muss dafür auf 4 gesetzt werden."
-
-#: ../data/gnome-phone-manager.schemas.in.h:7
-msgid "Whether to play a sound alert when a new message comes in"
-msgstr "Klang abspielen bei eingehenden Nachrichten"
-
-#: ../data/gnome-phone-manager.schemas.in.h:8
-msgid "Whether to play a sound alert when a new message comes in."
-msgstr ""
-"Legt fest, ob bei eingehenden Nachrichten ein Klang abgespielt werden soll."
-
-#: ../data/gnome-phone-manager.schemas.in.h:9
-msgid "Whether to popup new messages on the desktop"
-msgstr "Arbeitsflächen-Benachrichtigungen"
-
-#: ../data/gnome-phone-manager.schemas.in.h:10
-msgid ""
-"Whether to popup new messages on the desktop as soon as they're received, as "
-"opposed to showing them when clicking on the tray icon."
-msgstr ""
-"Legt fest, ob auf der Arbeitsfläche Benachrichtigungen erscheinen sollen, "
-"sobald diese empfangen werden, im Gegensatz zum Aufruf der Nachricht über das "
-"Symbol im Benachrichtigungsfeld."
-
-#: ../data/gnome-phone-manager.schemas.in.h:11
-msgid "Whether to retry connecting to the mobile phone"
-msgstr "Wiederverbinden mit dem Mobiltelefon"
-
-#: ../data/gnome-phone-manager.schemas.in.h:12
-msgid ""
-"Whether to retry connecting to the mobile phone if the connection fails at "
-"some point."
-msgstr ""
-"Legt fest, ob die Verbindung mit dem Mobiltelefon erneut versucht werden "
-"soll, wenn die Verbindung scheiterte."
-
-#: ../data/gnome-phone-manager.schemas.in.h:13
-msgid "Whether to synchronise the phone clock with the computer's"
-msgstr "Abgleich der Telefon-Uhr mit der Rechner-Uhr"
-
-#: ../data/gnome-phone-manager.schemas.in.h:14
-msgid "Whether to synchronise the phone clock with the computer's."
-msgstr ""
-"Legt fest, ob die Uhr des Telefons mit der des Rechners abgeglichen werden "
-"soll."
+#: ../telepathy/main.c:44
+msgid "Make all warnings fatal"
+msgstr "Alle Warnungen als schwerwiegend betrachten"
