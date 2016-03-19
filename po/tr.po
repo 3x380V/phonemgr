@@ -1,0 +1,456 @@
+# Turkish translation for phonemgr.
+# Copyright (C) 2015 phonemgr's COPYRIGHT HOLDER
+# This file is distributed under the same license as the phonemgr package.
+# İşbaran Akçayır <isbaran@gmail.com>, 2015.
+# Muhammet Kara <muhammetk@gmail.com>, 2016.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: phonemgr master\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"phone-manager&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2015-09-19 23:50+0000\n"
+"PO-Revision-Date: 2016-03-19 15:22+0200\n"
+"Last-Translator: Muhammet Kara <muhammetk@gmail.com>\n"
+"Language-Team: Turkish <gnome-turk@gnome.org>\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Gtranslator 2.91.6\n"
+"X-POOTLE-MTIME: 1425367136.000000\n"
+
+#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:153
+#, c-format
+msgid "Cannot get contact: %s"
+msgstr "Bağlantı alınamıyor: %s"
+
+#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:186
+#, c-format
+msgid "Could not find contact: %s"
+msgstr "Bağlantı bulunamadı: %s"
+
+#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:414
+msgid "Cannot create searchable view."
+msgstr "Aranabilir görünüm oluşturulamıyor."
+
+#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:884
+msgid "Success"
+msgstr "Başarılı"
+
+#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:886
+msgid "An argument was invalid."
+msgstr "Bağımsız değişken geçersiz."
+
+#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:888
+msgid "The address book is busy."
+msgstr "Adres defteri meşgul."
+
+#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:890
+msgid "The address book is offline."
+msgstr "Adres defteri çevrim dışı."
+
+#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:892
+msgid "The address book does not exist."
+msgstr "Adres defteri mevcut değil."
+
+#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:894
+msgid "The \"Me\" contact does not exist."
+msgstr "\"Ben\" kişisi mevcut değil."
+
+#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:896
+msgid "The address book is not loaded."
+msgstr "Adres defteri yüklü değil."
+
+#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:898
+msgid "The address book is already loaded."
+msgstr "Adres defteri zaten yüklü."
+
+#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:900
+msgid "Permission was denied when accessing the address book."
+msgstr "Adres defterine erişim reddedildi."
+
+#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:902
+msgid "The contact was not found."
+msgstr "Bağlantı bulunamadı."
+
+#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:904
+msgid "This contact ID already exists."
+msgstr "Bu bağlantı kimliği zaten var."
+
+#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:906
+msgid "The protocol is not supported."
+msgstr "İletişim kuralı desteklenmiyor."
+
+#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:908
+msgid "The operation was cancelled."
+msgstr "İşlem iptal edildi."
+
+#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:910
+msgid "The operation could not be cancelled."
+msgstr "İşlem iptal edilemedi."
+
+#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:912
+msgid "The address book authentication failed."
+msgstr "Adres defteri kimlik doğrulaması başarısız."
+
+#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:914
+msgid ""
+"Authentication is required to access the address book and was not given."
+msgstr "Adres defterine erişim için kimlik doğrulaması gerekli ama verilmemiş."
+
+#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:916
+msgid "A secure connection is not available."
+msgstr "Güvenli bir bağlantı kullanılabilir değil."
+
+#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:918
+msgid "A CORBA error occurred whilst accessing the address book."
+msgstr "Adres defterine erişirken bir CORBA hatası oluştu."
+
+#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:920
+msgid "The address book source does not exist."
+msgstr "Adres defteri kaynağı mevcut değil."
+
+#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:922
+#: ../cut-n-paste/e-contact-entry/e-contact-entry.c:925
+msgid "An unknown error occurred."
+msgstr "Bilinmeyen bir hata oluştu."
+
+#: ../cut-n-paste/gconf-bridge/gconf-bridge.c:1233
+#, c-format
+msgid "GConf error: %s"
+msgstr "GConf hatası: %s"
+
+#: ../cut-n-paste/gconf-bridge/gconf-bridge.c:1238
+msgid "All further errors shown only on terminal."
+msgstr "Diğer tüm hatalar yalnızca uçbirim ekranında görülebilir."
+
+#: ../data/gnome-phone-manager.schemas.in.h:1
+msgid "The connection type used by gnome-phone-manager"
+msgstr "gnome-phone-manager tarafından kullanılan bağlantı türü"
+
+#: ../data/gnome-phone-manager.schemas.in.h:2
+msgid ""
+"The connection type used by gnome-phone-manager: Bluetooth is 0 Serial 1 is "
+"1 Serial 2 is 2 IrDa is 3 Other connection types are 4"
+msgstr ""
+"gnome-phone-manager tarafından kullanılan bağlantı türü. Bluetooth 0 Seri 1 "
+"1 Seri 2 2 IrDa 3 ve diğer bağlantı türleri 4"
+
+#: ../data/gnome-phone-manager.schemas.in.h:3
+msgid "Bluetooth address of the device to connect to"
+msgstr "Bağlanılacak aygıtın Bluetooth adresi"
+
+#: ../data/gnome-phone-manager.schemas.in.h:4
+msgid ""
+"Bluetooth address of the device to connect to. Requires connection_type to "
+"be 1 to be used."
+msgstr ""
+"Bağlanılacak aygıtın Bluetooth adresi. Kullanmak için bağlantı_türü 1 "
+"gerektirir."
+
+#: ../data/gnome-phone-manager.schemas.in.h:5
+msgid "The device node for the serial device to connect to"
+msgstr "Seri aygıtın bağlanacağı aygıt düğümü"
+
+#: ../data/gnome-phone-manager.schemas.in.h:6
+msgid ""
+"The device node for the serial device to connect to. Requires "
+"connection_type to be 4 to be used."
+msgstr ""
+"Seri aygıtın bağlanacağı aygıt düğümü. Kullanılabilmesi için bağlantı_türü 4 "
+"gerektirir."
+
+#: ../data/gnome-phone-manager.schemas.in.h:7
+msgid "Whether to retry connecting to the mobile phone"
+msgstr "Taşınabilir telefona bağlanma girişimi tekrarlansın mı"
+
+#: ../data/gnome-phone-manager.schemas.in.h:8
+msgid ""
+"Whether to retry connecting to the mobile phone if the connection fails at "
+"some point."
+msgstr ""
+"Bağlantı bir noktada başarısız olursa taşınabilir telefona bağlanma girişimi "
+"tekrarlansın mı."
+
+#: ../data/gnome-phone-manager.schemas.in.h:9
+msgid "Whether to synchronise the phone clock with the computer's"
+msgstr "Telefon saati bilgisayarla eşzamanlansın mı"
+
+#: ../data/gnome-phone-manager.schemas.in.h:10
+msgid "Whether to synchronise the phone clock with the computer's."
+msgstr "Telefon saati bilgisayarla eşzamanlansın mı."
+
+#: ../data/gnome-phone-manager.schemas.in.h:11
+msgid "Whether to popup new messages on the desktop"
+msgstr "Yeni iletiler masa üstünde açılır pencerede açılsın mı"
+
+#: ../data/gnome-phone-manager.schemas.in.h:12
+msgid ""
+"Whether to popup new messages on the desktop as soon as they're received, as "
+"opposed to showing them when clicking on the tray icon."
+msgstr ""
+"Yeni iletiler sistem tepsisine tıklamayla açılmak yerine alınır alınmaz "
+"açılır pencerede gösterilsin mi."
+
+#: ../data/gnome-phone-manager.schemas.in.h:13
+msgid "Whether to play a sound alert when a new message comes in"
+msgstr "Yeni bir ileti geldiğinde sesli uyarı oynatılsın mı"
+
+#: ../data/gnome-phone-manager.schemas.in.h:14
+msgid "Whether to play a sound alert when a new message comes in."
+msgstr "Yeni bir ileti geldiğinde sesli uyarı oynatılsın mı."
+
+#: ../data/phonemgr.ui.h:1
+msgid "Message Received"
+msgstr "İleti Alındı"
+
+#: ../data/phonemgr.ui.h:2
+msgid "You have received a message"
+msgstr "Bir ileti aldınız"
+
+#: ../data/phonemgr.ui.h:3
+msgid "Sender:"
+msgstr "Gönderen:"
+
+#: ../data/phonemgr.ui.h:4
+msgid "Date:"
+msgstr "Tarih:"
+
+#: ../data/phonemgr.ui.h:5
+msgid "_Reply"
+msgstr "_Yanıtla"
+
+#: ../data/phonemgr.ui.h:6
+msgid "Send Message"
+msgstr "İleti Gönder"
+
+#: ../data/phonemgr.ui.h:7
+msgid "Enter your text message"
+msgstr "Metin iletinizi buraya yazın"
+
+#: ../data/phonemgr.ui.h:8
+msgid "_Recipient:"
+msgstr "_Alıcı:"
+
+#: ../data/phonemgr.ui.h:9
+msgid "_Message:"
+msgstr "_İleti:"
+
+#: ../data/phonemgr.ui.h:10
+msgid "Enter the text message you want to send."
+msgstr "Göndermek istediğiniz metin iletiyi girin."
+
+#: ../data/phonemgr.ui.h:11
+msgid "Characters left:"
+msgstr "Kalan karakter:"
+
+#. This is a receipt from the SMS server saying the message has been delivered to the recipient
+#: ../data/phonemgr.ui.h:13
+msgid "_Notify when message is delivered"
+msgstr "İleti ulaştırıldığında _uyar"
+
+#: ../data/phonemgr.ui.h:14
+msgid "_Send"
+msgstr "_Gönder"
+
+#: ../data/phonemgr.ui.h:15
+msgid "Phone Manager Preferences"
+msgstr "Telefon Yöneticisi Tercihleri"
+
+#: ../data/phonemgr.ui.h:16
+msgid "Alerting"
+msgstr "Uyarma"
+
+#: ../data/phonemgr.ui.h:17
+msgid "_Pop-up window for new messages"
+msgstr "_Yeni iletiler için açılır pencere"
+
+#: ../data/phonemgr.ui.h:18
+msgid "Play _sound when messages arrive"
+msgstr "İleti geldiğinde _ses oynat"
+
+#: ../data/phonemgr.ui.h:19
+msgid "Interface"
+msgstr "Arayüz"
+
+#: ../data/phonemgr.ui.h:20
+msgid "Phone Connection"
+msgstr "Telefon Bağlantısı"
+
+#: ../data/phonemgr.ui.h:21
+msgid "_Bluetooth"
+msgstr "_Bluetooth"
+
+#: ../data/phonemgr.ui.h:22
+msgid "Use Bluetooth wireless networking to connect to your phone"
+msgstr "Telefonunuza bağlanmak için Bluetooth kablosuz ağı kullanın"
+
+#: ../data/phonemgr.ui.h:23
+msgid "Serial port _1 (/dev/ttyS0)"
+msgstr "Seri port _1 (/dev/ttyS0)"
+
+#: ../data/phonemgr.ui.h:24
+msgid "Connect using serial port 1, also known as COM1 or /dev/ttyS0"
+msgstr "COM1 veya /dev/ttyS0 olarak da bilinen seri port 1 kullanarak bağlan"
+
+#: ../data/phonemgr.ui.h:25
+msgid "Serial port _2 (/dev/ttyS1)"
+msgstr "Seri port _2 (/dev/ttyS1)"
+
+#: ../data/phonemgr.ui.h:26
+msgid "Connect using serial port 2, also known as COM2 or /dev/ttyS1"
+msgstr "COM2 veya /dev/ttyS1 olarak da bilinen seri port 2 kullanarak bağlan"
+
+#: ../data/phonemgr.ui.h:27
+msgid "I_nfra red (/dev/ircomm0)"
+msgstr "Kızıl ö_tesi (/dev/ircomm0)"
+
+#: ../data/phonemgr.ui.h:28
+msgid "Connect using infrared communication"
+msgstr "Kızıl ötesi bağlantı kullanarak bağlan"
+
+#: ../data/phonemgr.ui.h:29
+msgid "Other _port"
+msgstr "Diğer _port"
+
+#: ../data/phonemgr.ui.h:30
+msgid "Connect using an alternative serial device"
+msgstr "Diğer bir seri aygıtı kullanarak bağlan"
+
+#: ../data/phonemgr.ui.h:31
+msgid "Alternative device filename, e.g. /dev/ttyS3"
+msgstr "Diğer aygıt dosya ismi, örn. /dev/ttyS3"
+
+#: ../data/phonemgr.ui.h:32
+msgid "Automated Tasks"
+msgstr "Otomatik Görevler"
+
+#: ../data/phonemgr.ui.h:33
+msgid "Automatically _retry connections"
+msgstr "Bağlantıları otomatik _yeniden dene"
+
+#: ../data/phonemgr.ui.h:34
+msgid ""
+"Always try and reconnect whenever a connection is not immediately available. "
+"Use this with Bluetooth to ensure your phone connects whenever it comes in "
+"range."
+msgstr ""
+"Bir bağlantı kullanılabilir olmadığında her zaman dene ve yeniden bağlan. "
+"Telefonunuz kapsama alanına girdiğinde otomatik bağlanması için bunu "
+"Bluetooth ile kullanın."
+
+#: ../data/phonemgr.ui.h:35
+msgid "Synchronise phone's _time and date"
+msgstr "Telefonun _saat ve tarihini eşzamanla"
+
+#: ../data/phonemgr.ui.h:36
+msgid "Synchronise phone's time and date with the computer's clock"
+msgstr "Telefonun saat ve tarihini bilgisayarın saatinden eşzamanla"
+
+#: ../data/phonemgr.ui.h:37
+msgid "Connection"
+msgstr "Bağlantı"
+
+#. Translators: "device" is a phone or a modem
+#: ../gnome-bluetooth/phonemgr.c:133
+msgid "Use this device with Phone Manager"
+msgstr "Bu aygıtı Telefon Yönetici ile kullan"
+
+#: ../libgsm/glibgsmtest.c:137 ../src/main.c:55
+msgid "- Manage your mobile phone"
+msgstr "- Taşınabilir telefonunuzu yönetin"
+
+#. translators: the '%s' will be substituted with '/dev/ttyS0'
+#. or similar
+#: ../src/connection.c:122
+#, c-format
+msgid "Connected to device on %s"
+msgstr "%s üstünden aygıta bağlanıldı"
+
+#. the ERROR signal will have been emitted, so we don't
+#. bother changing the icon ourselves at this point
+#. translators: the '%s' will be substituted with '/dev/ttyS0'
+#. or similar
+#: ../src/connection.c:128
+#, c-format
+msgid "Failed connection to device on %s"
+msgstr "%s üzerinden aygıta bağlantı başarısız"
+
+#: ../src/gnome-phone-manager.desktop.in.h:1 ../src/icon.c:81 ../src/menu.c:48
+msgid "Phone Manager"
+msgstr "Telefon Yöneticisi"
+
+#: ../src/gnome-phone-manager.desktop.in.h:2
+msgid "Receive and send text messages from your mobile phone"
+msgstr "Taşınabilir telefonunuzdan metin iletiler gönderin ve alın"
+
+#: ../src/icon.c:58
+msgid "Message arrived"
+msgstr "İleti alındı"
+
+#: ../src/icon.c:61
+msgid "Connected"
+msgstr "Bağlandı"
+
+#: ../src/icon.c:65
+msgid "Connecting to phone"
+msgstr "Telefona bağlanılıyor"
+
+#: ../src/icon.c:69
+msgid "Not connected"
+msgstr "Bağlı değil"
+
+#: ../src/main.c:37
+msgid "Show model name of a specific device"
+msgstr "Belirtilen aygıtın model ismini göster"
+
+#: ../src/main.c:37 ../src/main.c:38
+msgid "PORT"
+msgstr "PORT"
+
+#: ../src/main.c:38
+msgid "Write the configuration file for gnokii debugging"
+msgstr "Gnokii hata ayıklama için yapılandırma dosyasını yaz"
+
+#: ../src/main.c:39
+msgid "Enable debug"
+msgstr "Hata ayıklamayı etkinleştir"
+
+#: ../src/main.c:40
+msgid "Show version information and exit"
+msgstr "Sürüm bilgisi göster ve çık"
+
+#: ../src/main.c:69
+#, c-format
+msgid "gnome-phone-manager version %s\n"
+msgstr "gnome-phone-manager sürüm %s\n"
+
+#: ../src/menu.c:42
+msgid "Send and receive messages from your mobile phone."
+msgstr "Taşınabilir telefonunuzdan ileti alın ve yollayın."
+
+#: ../src/menu.c:50
+msgid "translator_credits"
+msgstr "İşbaran Akçayır <isbaran@gmail.com>"
+
+#: ../src/menu.c:52
+msgid "Phone Manager website"
+msgstr "Telefon Yöneticisi web sayfası"
+
+#: ../src/menu.c:83
+msgid "_Send Message"
+msgstr "_İleti Gönder"
+
+#: ../src/ui.c:109
+msgid "New text message received"
+msgstr "Yeni metin iletisi alındı"
+
+#: ../src/ui.c:285
+msgid "Message too long!"
+msgstr "Mesaj çok uzun!"
+
+#: ../telepathy/main.c:44
+msgid "Make all warnings fatal"
+msgstr "Tüm uyarıları ölümcül yap"
