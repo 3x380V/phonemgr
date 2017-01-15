@@ -33,8 +33,6 @@ enum {
 	LAST_SIGNAL
 };
 
-static void phonemgr_object_init (PhonemgrObject *o);
-
 static int phonemgr_object_signals[LAST_SIGNAL] = { 0 } ;
 
 #define PHONEMGR_DBUS_SERVICE		"org.gnome.phone"
@@ -46,10 +44,6 @@ G_DEFINE_TYPE (PhonemgrObject, phonemgr_object, G_TYPE_OBJECT)
 static void
 phonemgr_object_class_init (PhonemgrObjectClass *klass)
 {
-	GObjectClass *object_class;
-
-	object_class = (GObjectClass*) klass;
-
 	phonemgr_object_signals[NUMBER_BATTERIES_CHANGED] =
 		g_signal_new ("number-batteries-changed",
 			      G_OBJECT_CLASS_TYPE (klass),
