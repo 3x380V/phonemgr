@@ -36,6 +36,7 @@ telepathy_phoney_SOURCES = $(BACKEND_FILES)
 
 telepathy_phoney_LDADD =		\
 	$(TELEPATHY_LIBS)		\
+	$(PHONEMGR_LIBS)		\
 	../libgsm/libgsmwrap.la
 
 # Manager file
