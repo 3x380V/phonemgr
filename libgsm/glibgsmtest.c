@@ -236,11 +236,9 @@ main (int argc, char **argv)
 				g_printerr ("Failed to delete data at location '%s'\n", delete_uuid);
 			}
 		} else if (enter_main_loop != FALSE) {
-			GMainLoop *loop;
-
-			loop = g_main_loop_new (NULL, FALSE);
-			g_main_loop_run (loop);
-			g_main_loop_unref (loop);
+			GMainLoop *l = g_main_loop_new (NULL, FALSE);
+			g_main_loop_run (l);
+			g_main_loop_unref (l);
 		} else {
 			g_message ("Nothing to do!");
 		}

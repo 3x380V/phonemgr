@@ -511,12 +511,10 @@ phonemgr_utils_connect (const char *device, const char *driver, int channel, gbo
 
 	config = phonemgr_utils_write_config (driver ? driver : default_driver, device, channel);
 	if (debug != FALSE) {
-		char *debug;
-
-		debug = phonemgr_utils_config_append_debug (config);
+		char *str = phonemgr_utils_config_append_debug (config);
 		g_free (config);
-		lines = g_strsplit (debug, "\n", -1);
-		g_free (debug);
+		lines = g_strsplit (str, "\n", -1);
+		g_free (str);
 	} else {
 		lines = g_strsplit (config, "\n", -1);
 		g_free (config);
