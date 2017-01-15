@@ -1,12 +1,14 @@
 ## Process this file with automake to produce Makefile.in
 
-SUBDIRS = po libgsm cut-n-paste src gnome-bluetooth telepathy data
+SUBDIRS = libgsm cut-n-paste src gnome-bluetooth telepathy data po
+ACLOCAL_AMFLAGS = -I m4
 
 EXTRA_DIST = \
-	autogen.sh \
-	intltool-extract.in intltool-merge.in intltool-update.in
-
-DISTCLEANFILES = intltool-extract intltool-merge intltool-update
+	AUTHORS \
+	NEWS \
+	README \
+	TODO \
+	autogen.sh
 
 # Build ChangeLog from GIT history
 ChangeLog:

@@ -1,4 +1,3 @@
-
 SUBDIRS = icons
 
 man_MANS = gnome-phone-manager.1
@@ -6,33 +5,36 @@ man_MANS = gnome-phone-manager.1
 uidir = $(pkgdatadir)
 ui_DATA = phonemgr.ui
 
-schema_in_files = gnome-phone-manager.schemas.in
-schemadir = $(GCONF_SCHEMA_FILE_DIR)
-schema_DATA = $(schema_in_files:.schemas.in=.schemas)
-@INTLTOOL_SCHEMAS_RULE@
+desktop_in_files = gnome-phone-manager.desktop.in
+desktopdir = $(datadir)/applications
+desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
 
-install-data-local: $(schema_DATA)
-if GCONF_SCHEMAS_INSTALL
-	if test -z "$(DESTDIR)" ; then \
-	for p in $^ ; do \
-		GCONF_CONFIG_SOURCE=$(GCONF_SCHEMA_CONFIG_SOURCE) $(GCONFTOOL) --makefile-install-rule $$p 2>&1 > /dev/null; \
-	done \
-	fi
-endif
+#schema_in_files = gnome-phone-manager.schemas.in
+#schemadir = $(GCONF_SCHEMA_FILE_DIR)
+#schema_DATA = $(schema_in_files:.schemas.in=.schemas)
 
-gtk_update_icon_cache = gtk-update-icon-cache -f -t $(datadir)/icons/hicolor
+appdata_in_files = gnome-phone-manager.appdata.xml.in
+appdatadir = $(datadir)/appdata
+appdata_DATA = $(appdata_in_files:.xml.in=.xml)
 
-install-data-hook: update-icon-cache
-uninstall-hook: update-icon-cache
-update-icon-cache:
-	@-if test -z "$(DESTDIR)"; then \
-		echo "Updating Gtk icon cache."; \
-		$(gtk_update_icon_cache); \
-	else \
-		echo "*** Icon cache not updated.  After (un)install, run this:"; \
-		echo "***   $(gtk_update_icon_cache)"; \
-	fi
+CLEANFILES = \
+	$(schema_DATA) \
+	$(desktop_DATA) \
+	$(appdata_DATA)
 
-CLEANFILES = $(schema_DATA)
-EXTRA_DIST = $(ui_DATA) $(schema_in_files) $(man_MANS)
+EXTRA_DIST = \
+	$(ui_DATA) \
+	$(schema_in_files) \
+	$(desktop_in_files) \
+	$(appdata_in_files) \
+	$(man_MANS)
+
+DISTCHECK_CONFIGURE_FLAGS == --enable-appdata-check
+
+gnome-phone-manager.desktop: gnome-phone-manager.desktop.in
+	$(AM_V_GEN)$(MSGFMT) --desktop --template $< -d $(top_srcdir)/po -o $@
+
+gnome-phone-manager.appdata.xml: gnome-phone-manager.appdata.xml.in
+	$(AM_V_GEN)$(MSGFMT) --xml --template $< -d $(top_srcdir)/po -o $@
+
 

@@ -41,11 +41,6 @@ BUILT_SOURCES = phone-manager-interface.h
 phone-manager-interface.h: org_gnome_phone_Manager.xml
 	$(DBUS_BIND) --prefix=phonemgr_object --mode=glib-server $< > $@
 
-desktop_in_files = gnome-phone-manager.desktop.in
-desktopdir = $(datadir)/applications
-desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
-@INTLTOOL_DESKTOP_RULE@
-
 # The test program
 noinst_PROGRAMS = test-entry
 test_entry_SOURCES = test-entry.c e-phone-entry.c e-phone-entry.h 
@@ -56,6 +51,5 @@ test_entry_LDADD = \
 
 BUILT_SOURCES += $(MARSHALFILES)
 
-EXTRA_DIST = gnome-phone-manager.desktop.in org_gnome_phone_Manager.xml
-CLEANFILES = $(BUILT_SOURCES) $(desktop_DATA)
-
+EXTRA_DIST = org_gnome_phone_Manager.xml
+CLEANFILES = $(BUILT_SOURCES)

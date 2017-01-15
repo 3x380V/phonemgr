@@ -1,54 +1,58 @@
-dnl Process this file with autoconf to produce a configure script.
-AC_PREREQ(2.52)
+AC_PREREQ(2.63)
+AC_INIT([GNOME Phone Manager], [0.69], [http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-phone-manager], [gnome-phone-manager])
 
-AC_INIT([GNOME Phone Manager],[0.69],[http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-phone-manager],[gnome-phone-manager])
+AC_CONFIG_HEADERS(config.h)
 AC_CONFIG_SRCDIR(src/main.c)
+AC_CONFIG_MACRO_DIR([m4])
+
+AC_SUBST([PACKAGE_NAME], ["$PACKAGE_NAME"])
+AC_SUBST([PACKAGE_VERSION], ["$PACKAGE_VERSION"])
+
+AX_CHECK_ENABLE_DEBUG([yes],[GNOME_ENABLE_DEBUG])
 
 AM_MAINTAINER_MODE
-AM_CONFIG_HEADER(config.h)
-
 AM_INIT_AUTOMAKE([1.11 no-dist-gzip dist-xz check-news])
 m4_ifdef([AM_SILENT_RULES],[AM_SILENT_RULES([yes])])
 
-dnl Initialize libtool
-AM_PROG_LIBTOOL
-
-GNOKII_REQS="gnokii >= 0.6.28"
-GNOME_BLUETOOTH_REQS="gnome-bluetooth-1.0 >= 3.3"
-
+# Checks for programs.
 AC_PROG_CC
 AC_PROG_INSTALL
-AC_ISC_POSIX
-dnl Check for the "check" unit test framework
-dnl AC_CHECK_LIB(check,suite_create)
+
+GNOKII_REQUIRED=0.6.28
+GTK_REQUIRED=3.0
+GLIB_REQUIRED=2.32.0
+GNOME_ICON_THEME_REQUIRED=2.19.1
+GNOME_BLUETOOTH_REQUIRED=3.3
+
+# Initialize libtool
+LT_PREREQ([2.2.6])
+LT_INIT([disable-static])
+
+GETTEXT_PACKAGE=AC_PACKAGE_NAME
+AC_SUBST(GETTEXT_PACKAGE)
+AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE, "$GETTEXT_PACKAGE",
+		   [GNOME phone manager gettext domain])
+
+AX_REQUIRE_DEFINED([AM_GNU_GETTEXT_VERSION])
+AM_GNU_GETTEXT_VERSION([0.19.8])
+		
+AX_REQUIRE_DEFINED([AM_GNU_GETTEXT])
+AM_GNU_GETTEXT([external])
 
 # ****
-# i18n
-# ****
-
-IT_PROG_INTLTOOL([0.35.0])
-
-GETTEXT_PACKAGE=gnome-phone-manager
-AC_SUBST([GETTEXT_PACKAGE])
-AC_DEFINE_UNQUOTED([GETTEXT_PACKAGE],["gnome-phone-manager"],[GNOME phone manager applet gettext domain])
-AM_GLIB_GNU_GETTEXT
-
-# ****
-
 AC_PATH_PROG(GCONFTOOL, gconftool-2)
-AM_GCONF_SOURCE_2
 
 dnl Evolution address book
 PKG_CHECK_MODULES(TMP_EVO, libebook-1.2,
 		evo_pc_file="libebook-1.2",
 		evo_pc_file="libebook-1.0")
 
-PKG_CHECK_MODULES(LIBGSM, glib-2.0 gobject-2.0 $GNOKII_REQS gthread-2.0 bluez $evo_pc_file)
+PKG_CHECK_MODULES(LIBGSM, glib-2.0 gobject-2.0 gnokii >= $GNOKII_REQUIRED gthread-2.0 bluez $evo_pc_file)
 
-PKG_CHECK_MODULES(PHONEMGR, gtk+-3.0 >= 3.0 glib-2.0 >= 2.31.0
+PKG_CHECK_MODULES(PHONEMGR, gtk+-3.0 >= $GTK_REQUIRED glib-2.0 >= $GLIB_REQUIRED
 	libcanberra-gtk3 gconf-2.0
-	$GNOME_BLUETOOTH_REQS $evo_pc_file libedataserverui-3.0
-	gmodule-2.0 dbus-glib-1 gnome-icon-theme >= 2.19.1
+	gnome-bluetooth-1.0 >= $GNOME_BLUETOOTH_REQUIRED $evo_pc_file
+	gmodule-2.0 gthread-2.0 dbus-glib-1 gnome-icon-theme >= $GNOME_ICON_THEME_REQUIRED
 )
 
 DBUSLIBDIR="`$PKG_CONFIG dbus-glib-1 --variable=libdir`"
@@ -124,12 +128,6 @@ if test "x${datadir}" = 'x${prefix}/share'; then
 else
   AC_DEFINE_UNQUOTED(PHONEMGR_DATA_DIR, "${datadir}/${PACKAGE}", [data dir])
 fi
-
-GNOME_COMMON_INIT
-GNOME_DEBUG_CHECK
-GNOME_COMPILE_WARNINGS([maximum])
-GNOME_CXX_WARNINGS
-GNOME_MAINTAINER_MODE_DEFINES
 
 AC_CONFIG_FILES([
 Makefile

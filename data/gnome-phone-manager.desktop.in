@@ -1,6 +1,6 @@
 [Desktop Entry]
-_Name=Phone Manager
-_Comment=Receive and send text messages from your mobile phone
+Name=Phone Manager
+Comment=Receive and send text messages from your mobile phone
 Icon=phone
 Exec=gnome-phone-manager
 Terminal=false
