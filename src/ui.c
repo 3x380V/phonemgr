@@ -35,7 +35,7 @@
 #define MAX_MESSAGE_LENGTH 160
 
 static char *
-get_resource (MyApp *app, char *uiresname)
+get_resource (MyApp *app, const char *uiresname)
 {
 	char *fname;
 
@@ -68,7 +68,7 @@ chooser_created (BluetoothChooserButton *button, BluetoothChooser *chooser, gpoi
 }
 
 static GtkBuilder *
-get_ui (MyApp *app, char *widget)
+get_ui (MyApp *app, const char *widget)
 {
 	char *fname;
 	GError* error = NULL;
@@ -80,7 +80,7 @@ get_ui (MyApp *app, char *widget)
 	ui = gtk_builder_new ();
 
 	if (widget != NULL) {
-		char *widgets[] = { widget, NULL };
+		char *widgets[] = { (char *)widget, NULL };
 
 		if (!gtk_builder_add_objects_from_file (ui, fname, widgets, &error)) {
 			g_warning ("Couldn't load builder file: %s", error->message);
@@ -204,7 +204,7 @@ static void
 populate_prefs (MyApp *app)
 {
 	GtkWidget *w;
-	char *widgetname;
+	const char *widgetname;
 	int ctype;
 
 	ctype = gconf_client_get_int (app->client,

@@ -37,7 +37,7 @@ message (PhonemgrListener *listener, const char *sender,
 	g_main_loop_quit (loop);
 }
 
-static char *statuses[] = {
+static const char *statuses[] = {
 	"PHONEMGR_LISTENER_IDLE",
 	"PHONEMGR_LISTENER_CONNECTING",
 	"PHONEMGR_LISTENER_CONNECTED",
@@ -45,14 +45,14 @@ static char *statuses[] = {
 	"PHONEMGR_LISTENER_ERROR"
 };
 
-static char *call_statutes[] = {
+static const char *call_statutes[] = {
 	"PHONEMGR_LISTENER_CALL_INCOMING",
 	"PHONEMGR_LISTENER_CALL_ONGOING",
 	"PHONEMGR_LISTENER_CALL_IDLE",
 	"PHONEMGR_LISTENER_CALL_UNKNOWN"
 };
 
-static char *report_statuses[] = {
+static const char *report_statuses[] = {
 	"PHONEMGR_LISTENER_REPORT_DELIVERED",
 	"PHONEMGR_LISTENER_REPORT_PENDING",
 	"PHONEMGR_LISTENER_REPORT_FAILED_TEMPORARY",
