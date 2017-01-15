@@ -524,12 +524,12 @@ dequeue_message (MyApp *app)
 	GtkBuilder *ui;
 	GtkWidget *w;
 
-	g_mutex_lock (app->message_mutex);
+	g_mutex_lock (&app->message_mutex);
 	ptr = g_list_first (app->messages);
 	if (ptr) {
 		app->messages = g_list_remove_link (app->messages, ptr);
 	}
-	g_mutex_unlock (app->message_mutex);
+	g_mutex_unlock (&app->message_mutex);
 
 	if (! ptr) {
 		return TRUE;

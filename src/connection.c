@@ -132,9 +132,9 @@ connect_phone_thread (gpointer data)
 	} else {
 		g_message ("No device!");
 	}
-	g_mutex_lock (app->connecting_mutex);
+	g_mutex_lock (&app->connecting_mutex);
 	app->connecting = FALSE;
-	g_mutex_unlock (app->connecting_mutex);
+	g_mutex_unlock (&app->connecting_mutex);
 
 	gdk_threads_enter ();
 	set_icon_state (app);
@@ -147,18 +147,18 @@ connect_phone_thread (gpointer data)
 static void
 connect_phone (MyApp *app)
 {
-	g_mutex_lock (app->connecting_mutex);
+	g_mutex_lock (&app->connecting_mutex);
 	if (phonemgr_listener_connected (app->listener) == FALSE
 	    && app->connecting == FALSE) {
 		app->connecting = TRUE;
-		g_mutex_unlock (app->connecting_mutex);
+		g_mutex_unlock (&app->connecting_mutex);
 		/* we're neither connected, nor connecting */
 		app->connecting_thread = g_thread_create (connect_phone_thread,
 							  (gpointer) app,
 							  FALSE, NULL);
 	} else {
 		g_message ("Can't connect twice");
-		g_mutex_unlock (app->connecting_mutex);
+		g_mutex_unlock (&app->connecting_mutex);
 	}
 }
 
@@ -223,9 +223,9 @@ on_message (PhonemgrListener *listener, char *sender,
 	msg->timestamp = timestamp;
 	msg->message = g_strdup (message);
 
-	g_mutex_lock (app->message_mutex);
+	g_mutex_lock (&app->message_mutex);
 	app->messages = g_list_append (app->messages, (gpointer) msg);
-	g_mutex_unlock (app->message_mutex);
+	g_mutex_unlock (&app->message_mutex);
 
 	set_icon_state (app);
 	play_alert (app);
@@ -267,8 +267,6 @@ free_connection (MyApp *app)
 	g_source_remove (app->reconnector);
 	if (phonemgr_listener_connected (app->listener))
 		phonemgr_listener_disconnect (app->listener);
-	g_mutex_free (app->connecting_mutex);
-	g_mutex_free (app->message_mutex);
 }
 
 void
@@ -297,7 +295,7 @@ initialise_connection (MyApp *app)
 						  (gpointer)app);
 
 	gdk_threads_init ();
-	app->connecting_mutex = g_mutex_new ();
-	app->message_mutex = g_mutex_new ();
+	g_mutex_init (&app->connecting_mutex);
+	g_mutex_init (&app->message_mutex);
 }
 

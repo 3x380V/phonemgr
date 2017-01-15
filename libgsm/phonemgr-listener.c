@@ -36,7 +36,7 @@
 #define POLL_TIMEOUT 300 * 1000
 #define TRYLOCK_TIMEOUT 50 * 1000
 
-#define CHECK_EXIT { if (l->terminated != FALSE) { g_mutex_unlock (l->mutex); goto exit_thread; } }
+#define CHECK_EXIT { if (l->terminated != FALSE) { g_mutex_unlock (&l->mutex); goto exit_thread; } }
 
 static gpointer		 parent_class = NULL;
 
@@ -71,7 +71,7 @@ struct _PhonemgrListener
 
 	GThread *thread;
 	GAsyncQueue *queue;
-	GMutex *mutex;
+	GMutex mutex;
 
 	PhonemgrState *phone_state;
 
@@ -408,7 +408,7 @@ static void
 phonemgr_listener_init (PhonemgrListener *l)
 {
 	l->queue = g_async_queue_new ();
-	l->mutex = g_mutex_new ();
+	g_mutex_init (&l->mutex);
 	l->driver = NULL;
 	l->own_number = NULL;
 	l->batterylevel = 1;
@@ -427,7 +427,6 @@ phonemgr_listener_finalize(GObject *obj)
 			phonemgr_listener_disconnect (l);
 		//FIXME empty the queue of its stuff
 		g_async_queue_unref (l->queue);
-		g_mutex_free (l->mutex);
 	}
 
 	G_OBJECT_CLASS (parent_class)->finalize(obj);
@@ -976,7 +975,7 @@ phonemgr_listener_disconnect_cleanup (PhonemgrListener *l)
 static void
 phonemgr_listener_thread (PhonemgrListener *l)
 {
-	g_mutex_lock (l->mutex);
+	g_mutex_lock (&l->mutex);
 	CHECK_EXIT;
 	phonemgr_listener_set_sms_notification (l, TRUE);
 	CHECK_EXIT;
@@ -984,10 +983,10 @@ phonemgr_listener_thread (PhonemgrListener *l)
 	CHECK_EXIT;
 	phonemgr_listener_set_cell_notification (l, TRUE);
 	CHECK_EXIT;
-	g_mutex_unlock (l->mutex);
+	g_mutex_unlock (&l->mutex);
 
 	while (l->terminated == FALSE) {
-		if (g_mutex_trylock (l->mutex) != FALSE) {
+		if (g_mutex_trylock (&l->mutex) != FALSE) {
 			CHECK_EXIT;
 			if (l->supports_sms_notif != FALSE)
 				phonemgr_listener_sms_notification_soft_poll (l);
@@ -997,7 +996,7 @@ phonemgr_listener_thread (PhonemgrListener *l)
 			phonemgr_listener_battery_poll (l);
 			CHECK_EXIT;
 
-			g_mutex_unlock (l->mutex);
+			g_mutex_unlock (&l->mutex);
 			g_usleep (POLL_TIMEOUT);
 		} else {
 			g_usleep (TRYLOCK_TIMEOUT);
@@ -1005,7 +1004,7 @@ phonemgr_listener_thread (PhonemgrListener *l)
 	}
 
 exit_thread:
-	g_mutex_lock (l->mutex);
+	g_mutex_lock (&l->mutex);
 	if (l->connected != FALSE) {
 		phonemgr_listener_set_sms_notification (l, FALSE);
 		phonemgr_listener_set_call_notification (l, FALSE);
@@ -1014,7 +1013,7 @@ exit_thread:
 		phonemgr_listener_emit_status (l, PHONEMGR_LISTENER_DISCONNECTING);
 		phonemgr_listener_disconnect_cleanup (l);
 	}
-	g_mutex_unlock (l->mutex);
+	g_mutex_unlock (&l->mutex);
 
 	g_thread_exit (NULL);
 }
@@ -1064,7 +1063,7 @@ phonemgr_listener_queue_message (PhonemgrListener *l,
 	g_return_if_fail (message != NULL);
 
 	/* Lock the phone and set up for SMS sending */
-	g_mutex_lock (l->mutex);
+	g_mutex_lock (&l->mutex);
 	gn_data_clear(&l->phone_state->data);
 	gn_sms_default_submit(&sms);
 
@@ -1093,7 +1092,7 @@ phonemgr_listener_queue_message (PhonemgrListener *l,
 		g_warning ("Conversion error: %d %s", err->code, err->message);
 		g_free (mstr);
 		g_error_free (err);
-		g_mutex_unlock (l->mutex);
+		g_mutex_unlock (&l->mutex);
 		return;
 	}
 
@@ -1113,7 +1112,7 @@ phonemgr_listener_queue_message (PhonemgrListener *l,
 		sms.smsc.type = center.smsc.type;
 	} else if (error == GN_ERR_NOTREADY) {
 		g_message ("Can't send message, phone disconnected");
-		g_mutex_unlock (l->mutex);
+		g_mutex_unlock (&l->mutex);
 		g_free (mstr);
 		return;
 	}
@@ -1142,7 +1141,7 @@ phonemgr_listener_queue_message (PhonemgrListener *l,
 	l->phone_state->data.sms = NULL;
 
 	/* Unlock the phone */
-	g_mutex_unlock (l->mutex);
+	g_mutex_unlock (&l->mutex);
 }
 
 void
@@ -1167,7 +1166,7 @@ phonemgr_listener_set_time (PhonemgrListener *l,
 	date.second = t->tm_sec;
 
 	/* Lock the phone */
-	g_mutex_lock (l->mutex);
+	g_mutex_lock (&l->mutex);
 
 	/* Set the time and date */
 	gn_data_clear(&l->phone_state->data);
@@ -1175,7 +1174,7 @@ phonemgr_listener_set_time (PhonemgrListener *l,
 	error = phonemgr_listener_gnokii_func (GN_OP_SetDateTime, l);
 
 	/* Unlock the phone */
-	g_mutex_unlock (l->mutex);
+	g_mutex_unlock (&l->mutex);
 
 	if (error != GN_ERR_NONE)
 		g_warning ("Can't set date: %s", phonemgr_utils_gn_error_to_string (error, &perr));
@@ -1246,21 +1245,21 @@ phonemgr_listener_get_data (PhonemgrListener *l,
 			if (phonemgr_listener_parse_data_uuid (dataid, &memory_type, &index) == FALSE)
 				return NULL;
 
-			g_mutex_lock (l->mutex);
+			g_mutex_lock (&l->mutex);
 
 			if (phonemgr_listener_get_phonebook_entry (l, memory_type, index, &entry) == FALSE) {
-				g_mutex_unlock (l->mutex);
+				g_mutex_unlock (&l->mutex);
 				return NULL;
 			}
 
 			if (entry.empty != FALSE) {
-				g_mutex_unlock (l->mutex);
+				g_mutex_unlock (&l->mutex);
 				return NULL;
 			}
 
 			retval = gn_phonebook2vcardstr (&entry);
 
-			g_mutex_unlock (l->mutex);
+			g_mutex_unlock (&l->mutex);
 
 			return retval;
 		}
@@ -1276,7 +1275,7 @@ phonemgr_listener_get_data (PhonemgrListener *l,
 			if (phonemgr_listener_parse_data_uuid (dataid, NULL, &index) == FALSE)
 				return NULL;
 
-			g_mutex_lock (l->mutex);
+			g_mutex_lock (&l->mutex);
 
 			memset (&calnote, 0, sizeof (calnote));
 			memset (&calnote_list, 0, sizeof (calnote_list));
@@ -1286,12 +1285,12 @@ phonemgr_listener_get_data (PhonemgrListener *l,
 			calnote.location = index;
 			error = phonemgr_listener_gnokii_func (GN_OP_GetCalendarNote, l);
 			if (error != GN_ERR_NONE) {
-				g_mutex_unlock (l->mutex);
+				g_mutex_unlock (&l->mutex);
 				return NULL;
 			}
 			retval = gn_calnote2icalstr (&calnote);
 
-			g_mutex_unlock (l->mutex);
+			g_mutex_unlock (&l->mutex);
 
 			return retval;
 		}
@@ -1317,14 +1316,14 @@ phonemgr_listener_list_all_data (PhonemgrListener *l,
 			gn_error error;
 			guint i, found;
 
-			g_mutex_lock (l->mutex);
+			g_mutex_lock (&l->mutex);
 			memset (&memstat, 0, sizeof (memstat));
 			memstat.memory_type = gn_str2memory_type("ME");
 			l->phone_state->data.memory_status = &memstat;
 			error = phonemgr_listener_gnokii_func (GN_OP_GetMemoryStatus, l);
 			if (error != GN_ERR_NONE) {
 				g_message ("GN_OP_GetMemoryStatus on ME failed");
-				g_mutex_unlock (l->mutex);
+				g_mutex_unlock (&l->mutex);
 				break;
 			}
 
@@ -1348,7 +1347,7 @@ phonemgr_listener_list_all_data (PhonemgrListener *l,
 			if (error != GN_ERR_NONE) {
 				g_message ("GN_OP_GetMemoryStatus on SM failed");
 				g_ptr_array_add (a, NULL);
-				g_mutex_unlock (l->mutex);
+				g_mutex_unlock (&l->mutex);
 				return (char **) g_ptr_array_free (a, FALSE);
 			}
 
@@ -1364,7 +1363,7 @@ phonemgr_listener_list_all_data (PhonemgrListener *l,
 				}
 			}
 			g_ptr_array_add (a, NULL);
-			g_mutex_unlock (l->mutex);
+			g_mutex_unlock (&l->mutex);
 
 			return (char **) g_ptr_array_free (a, FALSE);
 		}
@@ -1376,7 +1375,7 @@ phonemgr_listener_list_all_data (PhonemgrListener *l,
 			gn_error error;
 			guint i;
 
-			g_mutex_lock (l->mutex);
+			g_mutex_lock (&l->mutex);
 
 			memset (&calnote, 0, sizeof (calnote));
 			memset (&calnote_list, 0, sizeof (calnote_list));
@@ -1401,7 +1400,7 @@ phonemgr_listener_list_all_data (PhonemgrListener *l,
 			}
 
 			g_ptr_array_add (a, NULL);
-			g_mutex_unlock (l->mutex);
+			g_mutex_unlock (&l->mutex);
 
 			return (char **) g_ptr_array_free (a, FALSE);
 		}
@@ -1431,7 +1430,7 @@ phonemgr_listener_delete_data (PhonemgrListener *l,
 			if (phonemgr_listener_parse_data_uuid (dataid, &memory_type, &index) == FALSE)
 				return FALSE;
 
-			g_mutex_lock (l->mutex);
+			g_mutex_lock (&l->mutex);
 
 			memset(&entry, 0, sizeof(gn_phonebook_entry));
 			entry.memory_type = memory_type;
@@ -1441,7 +1440,7 @@ phonemgr_listener_delete_data (PhonemgrListener *l,
 			l->phone_state->data.phonebook_entry = &entry;
 			error = phonemgr_listener_gnokii_func (GN_OP_DeletePhonebook, l);
 
-			g_mutex_unlock (l->mutex);
+			g_mutex_unlock (&l->mutex);
 
 			return (error == GN_ERR_NONE);
 		}
@@ -1456,7 +1455,7 @@ phonemgr_listener_delete_data (PhonemgrListener *l,
 			if (phonemgr_listener_parse_data_uuid (dataid, NULL, &index) == FALSE)
 				return FALSE;
 
-			g_mutex_lock (l->mutex);
+			g_mutex_lock (&l->mutex);
 
 			memset (&calnote, 0, sizeof (calnote));
 			memset (&calnote_list, 0, sizeof (calnote_list));
@@ -1466,7 +1465,7 @@ phonemgr_listener_delete_data (PhonemgrListener *l,
 			calnote.location = index;
 			error = phonemgr_listener_gnokii_func (GN_OP_DeleteCalendarNote, l);
 
-			g_mutex_unlock (l->mutex);
+			g_mutex_unlock (&l->mutex);
 
 			return (error == GN_ERR_NONE);
 		}
@@ -1493,7 +1492,7 @@ phonemgr_listener_put_data (PhonemgrListener *l,
 			gn_error error;
 			guint i;
 
-			g_mutex_lock (l->mutex);
+			g_mutex_lock (&l->mutex);
 
 			memset(&entry, 0, sizeof(gn_phonebook_entry));
 			if (vcard_to_phonebook_entry (data, &entry) == FALSE) {
@@ -1520,7 +1519,7 @@ phonemgr_listener_put_data (PhonemgrListener *l,
 			}
 
 			if (error != GN_ERR_NONE) {
-				g_mutex_unlock (l->mutex);
+				g_mutex_unlock (&l->mutex);
 				return NULL;
 			}
 
@@ -1531,13 +1530,13 @@ phonemgr_listener_put_data (PhonemgrListener *l,
 			error = phonemgr_listener_gnokii_func (GN_OP_WritePhonebook, l);
 
 			if (error != GN_ERR_NONE) {
-				g_mutex_unlock (l->mutex);
+				g_mutex_unlock (&l->mutex);
 				return NULL;
 			}
 
 			retval = g_strdup_printf ("GPM-UUID-%s-%s-%d", l->imei, "ME", entry.location);
 
-			g_mutex_unlock (l->mutex);
+			g_mutex_unlock (&l->mutex);
 
 			return retval;
 		}

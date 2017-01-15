@@ -47,13 +47,13 @@ typedef struct _appinfo {
 	gboolean    reconnect;
 
 	/* messages */
-	GMutex  *message_mutex;
+	GMutex  message_mutex;
 	GList   *messages;
 
 	/* thread stuff for connecting and disconnecting */
 	GThread *connecting_thread;
 	GThread *disconnecting_thread;
-	GMutex *connecting_mutex;
+	GMutex connecting_mutex;
 	gboolean connecting;
 	gint status;
 
