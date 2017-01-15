@@ -100,7 +100,7 @@ AC_ARG_ENABLE(bluetooth-plugin,
 	[ENABLE_BLUETOOTH_PLUGIN=yes]) dnl Default value
 
 if test x$ENABLE_BLUETOOTH_PLUGIN = "xyes" ; then
-	PKG_CHECK_MODULES(BLUETOOTH_PLUGIN, gnome-bluetooth-1.0 >= 2.27.6 gconf-2.0,
+	PKG_CHECK_MODULES(BLUETOOTH_PLUGIN, gnome-bluetooth-1.0 >= 2.27.6 gnome-bluetooth-1.0 < 3.11.0 gconf-2.0,
 			[HAVE_BLUETOOTH_PLUGIN=yes], [HAVE_BLUETOOTH_PLUGIN=no])
 fi
 if test x$HAVE_BLUETOOTH_PLUGIN = "xyes"; then
