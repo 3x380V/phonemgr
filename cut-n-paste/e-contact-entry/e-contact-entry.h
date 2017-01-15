@@ -23,10 +23,8 @@
 #ifndef CONTACT_ENTRY_H
 #define CONTACT_ENTRY_H
 
-#include <libedataserver/e-source-group.h>
-#include <libedataserver/e-source-list.h>
-#include <libebook/e-contact.h>
 #include <gtk/gtk.h>
+#include <libebook/libebook.h>
 
 G_BEGIN_DECLS
 
@@ -71,8 +69,8 @@ GType e_contact_entry_get_type (void);
 
 GtkWidget *e_contact_entry_new (void);
 
-void e_contact_entry_set_source_list (EContactEntry *entry, ESourceList *list);
-ESourceList *e_contact_entry_get_source_list (EContactEntry *entry);
+void e_contact_entry_set_registry (EContactEntry *entry, ESourceRegistry *registry);
+ESourceRegistry *e_contact_entry_get_registry (EContactEntry *entry);
 
 void e_contact_entry_set_complete_length(EContactEntry *entry, int length);
 int e_contact_entry_get_complete_length(EContactEntry *entry);

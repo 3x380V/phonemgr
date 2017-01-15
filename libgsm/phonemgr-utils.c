@@ -27,7 +27,7 @@
 #include <glib.h>
 #include <glib/gstdio.h>
 #include <glib-object.h>
-#include <libebook/e-contact.h>
+#include <libebook-contacts/libebook-contacts.h>
 #include <gnokii.h>
 
 #include <bluetooth/bluetooth.h>

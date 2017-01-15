@@ -30,8 +30,7 @@
 
 #include <gtk/gtk.h>
 #include <string.h>
-#include <libedataserver/e-source-list.h>
-#include <libedataserverui/e-client-utils.h>
+#include <libedataserver/libedataserver.h>
 #include "e-phone-entry.h"
 
 #define CONTACT_FORMAT "%s (%s)"
@@ -180,25 +179,25 @@ e_phone_entry_finalize (GObject *object)
 }
 
 static void
-add_sources (EContactEntry *entry)
-{
-	ESourceList *source_list;
-
-	if (e_client_utils_get_sources (&source_list,
-					E_CLIENT_SOURCE_TYPE_CONTACTS,
-					NULL)) {
-		e_contact_entry_set_source_list (E_CONTACT_ENTRY (entry),
-						 source_list);
-		g_object_unref (source_list);
-	}
-}
-
-static void
 e_phone_entry_init (EPhoneEntry *entry)
 {
 	EContactField fields[] = { E_CONTACT_FULL_NAME, E_CONTACT_NICKNAME, E_CONTACT_ORG, E_CONTACT_PHONE_MOBILE, 0 };
+	ESourceRegistry *registry;
+	GError *error = NULL;
 
-	add_sources (E_CONTACT_ENTRY (entry));
+	/* XXX This call blocks while a D-Bus connection is made, possibly
+	 *     requiring activation.  Might be better to create the registry
+	 *     in main(), pass it to ui_init(), and have e_phone_entry_new()
+	 *     take it as an argument.  Calling this from main() means if it
+	 *     fails you can abort cleanly with a console error message. */
+	registry = e_source_registry_new_sync (NULL, &error);
+	if (registry == NULL) {
+		g_error ("%s: %s", G_STRFUNC, error->message);
+		g_assert_not_reached ();
+	}
+	e_contact_entry_set_registry (E_CONTACT_ENTRY (entry), registry);
+	g_object_unref (registry);
+
 	e_contact_entry_set_search_fields (E_CONTACT_ENTRY (entry), (const EContactField *)fields);
 	e_contact_entry_set_display_func (E_CONTACT_ENTRY (entry), test_display_func, NULL, NULL);
 	g_signal_connect (G_OBJECT (entry), "contact_selected",
@@ -210,9 +209,7 @@ e_phone_entry_init (EPhoneEntry *entry)
 static void
 e_phone_entry_class_init (EPhoneEntryClass *klass)
 {
-	GObjectClass *object_class;
-
-	object_class = (GObjectClass *) klass;
+	GObjectClass *object_class = (GObjectClass *) klass;
 
 	/* GObject */
 	object_class->finalize = e_phone_entry_finalize;
