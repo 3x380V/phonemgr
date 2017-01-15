@@ -512,8 +512,7 @@ phonemgr_listener_connect (PhonemgrListener *l, const char *device, GError **err
 	phonemgr_listener_emit_status (l, PHONEMGR_LISTENER_CONNECTED);
 	phonemgr_listener_get_own_details (l);
 
-	l->thread = g_thread_create ((GThreadFunc) phonemgr_listener_thread,
-				     l, TRUE, NULL);
+	l->thread = g_thread_new ("listener", (GThreadFunc) phonemgr_listener_thread, l);
 
 	return l->connected;
 }

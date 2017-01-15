@@ -153,9 +153,9 @@ connect_phone (MyApp *app)
 		app->connecting = TRUE;
 		g_mutex_unlock (&app->connecting_mutex);
 		/* we're neither connected, nor connecting */
-		app->connecting_thread = g_thread_create (connect_phone_thread,
-							  (gpointer) app,
-							  FALSE, NULL);
+		app->connecting_thread = g_thread_new ("connecting",
+							connect_phone_thread,
+							(gpointer) app);
 	} else {
 		g_message ("Can't connect twice");
 		g_mutex_unlock (&app->connecting_mutex);
@@ -254,8 +254,9 @@ reconnect_phone (MyApp *app)
 		g_message ("Disconnecting...");
 		app->reconnect = TRUE;
 		app->disconnecting_thread =
-			g_thread_create ((GThreadFunc) phonemgr_listener_disconnect,
-				(gpointer) app->listener, TRUE, NULL);
+			g_thread_new ("disconnecting",
+				(GThreadFunc) phonemgr_listener_disconnect,
+				(gpointer) app->listener);
 	} else {
 		connect_phone (app);
 	}
