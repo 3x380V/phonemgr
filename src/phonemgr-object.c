@@ -1,5 +1,5 @@
 /* -*- Mode: C; tab-width: 8; indent-tabs-mode: t; c-basic-offset: 8 -*- */
-/* 
+/*
  * Copyright (C) 2007 Bastien Nocera <hadess@hadess.net>
  *
  * This program is free software; you can redistribute it and/or modify
@@ -174,7 +174,7 @@ phonemgr_object_register (DBusGConnection *connection,
 	g_object_unref (G_OBJECT (bus_proxy));
 
 	/* already running */
- 	if (request_name_result != DBUS_REQUEST_NAME_REPLY_PRIMARY_OWNER) {
+	if (request_name_result != DBUS_REQUEST_NAME_REPLY_PRIMARY_OWNER) {
 		return FALSE;
 	}
 

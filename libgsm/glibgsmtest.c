@@ -1,5 +1,5 @@
 /* -*- Mode: C; tab-width: 8; indent-tabs-mode: t; c-basic-offset: 8 -*- */
-/* 
+/*
  * Copyright (C) 2002-2004 Edd Dumbill <edd@usefulinc.com>
  * Copyright (C) 2005-2007 Bastien Nocera <hadess@hadess.net>
  *
@@ -144,7 +144,7 @@ main (int argc, char **argv)
 		g_error_free (err);
 		return 1;
 	}
-	
+
 	listener = phonemgr_listener_new (debug);
 
 	g_signal_connect (G_OBJECT (listener), "message",

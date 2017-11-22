@@ -1,5 +1,5 @@
 /* -*- Mode: C; tab-width: 8; indent-tabs-mode: t; c-basic-offset: 8 -*- */
-/* 
+/*
  * Copyright (C) 2005 Bastien Nocera <hadess@hadess.net>
  *
  * e-phone-entry.h
@@ -37,16 +37,18 @@ G_BEGIN_DECLS
 typedef struct EPhoneEntry EPhoneEntry;
 
 struct EPhoneEntry {
-  EContactEntry entry;
-  char *text;
-  char *phone_number;
+	EContactEntry entry;
+	char *text;
+	char *phone_number;
 };
 
 typedef struct {
-  EContactEntryClass parent_class;
-  /* Fired when the phone number has changed, NULL if we shouldn't be able
-   * to activate */
-  void (*phone_changed) (GtkWidget *entry, const char *phone_number);
+	EContactEntryClass parent_class;
+	/*
+	 * Fired when the phone number has changed, NULL if we shouldn't
+	 * be able to activate
+	 */
+	void (*phone_changed) (GtkWidget *entry, const char *phone_number);
 } EPhoneEntryClass;
 
 GType e_phone_entry_get_type (void);

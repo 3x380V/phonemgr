@@ -1,5 +1,5 @@
 /* -*- Mode: C; tab-width: 8; indent-tabs-mode: t; c-basic-offset: 8 -*- */
-/* 
+/*
  * Copyright (C) 2002-2004 Edd Dumbill <edd@usefulinc.com>
  * Copyright (C) 2005-2007 Bastien Nocera <hadess@hadess.net>
  *

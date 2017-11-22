@@ -1,5 +1,5 @@
 /* -*- Mode: C; tab-width: 8; indent-tabs-mode: t; c-basic-offset: 8 -*- */
-/* 
+/*
  * Copyright (C) 2005 Bastien Nocera <hadess@hadess.net>
  *
  * e-phone-entry.c
@@ -38,8 +38,8 @@
 
 /* Signals */
 enum {
-  PHONE_CHANGED, /* Signal argument is the phone number */
-  LAST_SIGNAL
+	PHONE_CHANGED, /* Signal argument is the phone number */
+	LAST_SIGNAL
 };
 
 static int signals[LAST_SIGNAL] = { 0 };
@@ -210,21 +210,21 @@ e_phone_entry_init (EPhoneEntry *entry)
 static void
 e_phone_entry_class_init (EPhoneEntryClass *klass)
 {
-  GObjectClass *object_class;
-  
-  object_class = (GObjectClass *) klass;
-  
-  /* GObject */
-  object_class->finalize = e_phone_entry_finalize;
+	GObjectClass *object_class;
 
-  /* Signals */
-  signals[PHONE_CHANGED] = g_signal_new ("phone-changed",
-                                            G_TYPE_FROM_CLASS (object_class),
-                                            G_SIGNAL_RUN_LAST,
-                                            G_STRUCT_OFFSET (EPhoneEntryClass, phone_changed),
-                                            NULL, NULL,
-                                            g_cclosure_marshal_VOID__STRING,
-                                            G_TYPE_NONE, 1, G_TYPE_STRING);
+	object_class = (GObjectClass *) klass;
+
+	/* GObject */
+	object_class->finalize = e_phone_entry_finalize;
+
+	/* Signals */
+	signals[PHONE_CHANGED] = g_signal_new ("phone-changed",
+					G_TYPE_FROM_CLASS (object_class),
+					G_SIGNAL_RUN_LAST,
+					G_STRUCT_OFFSET (EPhoneEntryClass, phone_changed),
+					NULL, NULL,
+					g_cclosure_marshal_VOID__STRING,
+					G_TYPE_NONE, 1, G_TYPE_STRING);
 }
 
 GtkWidget *

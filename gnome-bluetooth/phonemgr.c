@@ -43,7 +43,7 @@ get_type (const char *address)
 	GtkTreeIter iter;
 	gboolean cont;
 
-	client = bluetooth_client_new (); 
+	client = bluetooth_client_new ();
 	model = bluetooth_client_get_device_model (client);
 	if (model == NULL) {
 		g_object_unref (client);

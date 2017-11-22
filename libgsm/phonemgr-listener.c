@@ -23,7 +23,7 @@
 
 #include <stdlib.h>
 #include <unistd.h>
-#include <string.h> 
+#include <string.h>
 #include <glib.h>
 #include <glib-object.h>
 #include <gnokii.h>
@@ -699,7 +699,7 @@ phonemgr_listener_cell_not_cb (gn_network_info *info, void *user_data)
 	if (info->network_code == NULL ||
 	    info->network_code[0] == '\0' ||
 	    strstr (info->network_code, " ") == NULL)
-	    	return;
+		return;
 
 	mcc = g_ascii_strtoll (info->network_code, &end, 0);
 	if (mcc == 0)
