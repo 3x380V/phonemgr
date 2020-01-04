@@ -32,6 +32,8 @@
 #include "phonemgr-marshal.h"
 #include "phonemgr-utils.h"
 
+//#define HAVE_GNOKII_CALLBACKS_STRUCT
+
 /* #define DUMMY 1 */
 #define POLL_TIMEOUT 300 * 1000
 #define TRYLOCK_TIMEOUT 50 * 1000
@@ -686,7 +688,11 @@ phonemgr_listener_cell_not_cb (gn_network_info *info, void *user_data)
 		gn_network_info new_info;
 
 		l->phone_state->data.network_info = &new_info;
+#ifdef HAVE_GNOKII_CALLBACKS_STRUCT
+		l->phone_state->state.callbacks.reg_notification = phonemgr_listener_cell_not_cb;
+#else
 		l->phone_state->data.reg_notification = phonemgr_listener_cell_not_cb;
+#endif
 		l->phone_state->data.callback_data = l;
 
 		if (phonemgr_listener_gnokii_func (GN_OP_GetNetworkInfo, l) != GN_ERR_NONE)
@@ -886,7 +892,11 @@ phonemgr_listener_set_sms_notification (PhonemgrListener *l, gboolean state)
 		gn_error error;
 		/* Try to set up SMS notification using GN_OP_OnSMS */
 		gn_data_clear (&l->phone_state->data);
+#ifdef HAVE_GNOKII_CALLBACKS_STRUCT
+		l->phone_state->state.callbacks.on_sms = phonemgr_listener_new_sms_cb;
+#else
 		l->phone_state->data.on_sms = phonemgr_listener_new_sms_cb;
+#endif
 		l->phone_state->data.callback_data = l;
 		error = phonemgr_listener_gnokii_func (GN_OP_OnSMS, l);
 		if (error == GN_ERR_NONE) {
@@ -902,7 +912,11 @@ phonemgr_listener_set_sms_notification (PhonemgrListener *l, gboolean state)
 			return;
 		/* Disable the SMS callback on exit */
 		if (l->supports_sms_notif != FALSE) {
+#ifdef HAVE_GNOKII_CALLBACKS_STRUCT
+			l->phone_state->state.callbacks.on_sms = NULL;
+#else
 			l->phone_state->data.on_sms = NULL;
+#endif
 			phonemgr_listener_gnokii_func (GN_OP_OnSMS, l);
 		}
 	}
@@ -914,13 +928,21 @@ phonemgr_listener_set_call_notification (PhonemgrListener *l, gboolean state)
 	if (state != FALSE) {
 		/* Set up Call notification using GN_OP_SetCallNotification */
 		gn_data_clear (&l->phone_state->data);
+#ifdef HAVE_GNOKII_CALLBACKS_STRUCT
+		l->phone_state->state.callbacks.call_notification = phonemgr_listener_new_call_cb;
+#else
 		l->phone_state->data.call_notification = phonemgr_listener_new_call_cb;
+#endif
 		l->phone_state->data.callback_data = l;
 		phonemgr_listener_gnokii_func (GN_OP_SetCallNotification, l);
 	} else {
 		/* Disable call notification */
 		gn_data_clear (&l->phone_state->data);
+#ifdef HAVE_GNOKII_CALLBACKS_STRUCT
+		l->phone_state->state.callbacks.call_notification = NULL;
+#else
 		l->phone_state->data.call_notification = NULL;
+#endif
 		phonemgr_listener_gnokii_func (GN_OP_SetCallNotification, l);
 	}
 }
@@ -935,7 +957,11 @@ phonemgr_listener_set_cell_notification (PhonemgrListener *l, gboolean state)
 		gn_data_clear (&l->phone_state->data);
 		memset (&info, 0, sizeof(info));
 		l->phone_state->data.network_info = &info;
+#ifdef HAVE_GNOKII_CALLBACKS_STRUCT
+		l->phone_state->state.callbacks.reg_notification = phonemgr_listener_cell_not_cb;
+#else
 		l->phone_state->data.reg_notification = phonemgr_listener_cell_not_cb;
+#endif
 		l->phone_state->data.callback_data = l;
 		if (phonemgr_listener_gnokii_func (GN_OP_GetNetworkInfo, l) != GN_ERR_NONE)
 			return;
@@ -944,7 +970,11 @@ phonemgr_listener_set_cell_notification (PhonemgrListener *l, gboolean state)
 	} else {
 		/* Disable cell notification */
 		gn_data_clear (&l->phone_state->data);
+#ifdef HAVE_GNOKII_CALLBACKS_STRUCT
+		l->phone_state->state.callbacks.reg_notification = NULL;
+#else
 		l->phone_state->data.reg_notification = NULL;
+#endif
 		phonemgr_listener_gnokii_func (GN_OP_GetNetworkInfo, l);
 	}
 }
